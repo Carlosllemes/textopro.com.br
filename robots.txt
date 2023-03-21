@@ -1,0 +1,6 @@
+User-agent: *
+
+Disallow: /inc/
+
+
+Sitemap: https://www.textopro.com.br/sitemap.xml
