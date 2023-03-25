@@ -1,6 +1,6 @@
 <?php
-$desc = "Textopro - O melhor serviço de criação de conteúdo";
-$title = "Com a Textopro, você tem acesso ao melhor serviço de criação de conteúdo! Aumente sua visibilidade online e atraia mais clientes com textos persuasivos e de alta qualidade. Experimente agora!";
+$title = "Textopro - O melhor serviço de criação de conteúdo";
+$desc = "Com a Textopro, você tem acesso ao melhor serviço de criação de conteúdo! Aumente sua visibilidade online e atraia mais clientes com textos persuasivos e de alta qualidade. Experimente agora!";
 include("assets/inc/head.php") ?>
 </head>
 
@@ -13,9 +13,7 @@ include("assets/inc/head.php") ?>
   </section>
   <!-- End Hero -->
   <main id="main">
-    <!-- ======= Sobre Section ======= -->
-    <?php include("assets/components/about-us.php") ?>
-    <!-- End Sobre Section -->
+
     <!-- ======= Services Section ======= -->
     <section id="solucoes" class="services">
       <div class="container" data-aos="fade-up">
@@ -25,8 +23,13 @@ include("assets/inc/head.php") ?>
         </div>
         <?php include("assets/components/cards-service.php") ?>
       </div>
-    </section><!-- End Services Section -->
+    </section>
     <!-- ======= Features Section ======= -->
+    <!-- End Services Section -->
+    <? include("assets/components/plans.php") ?>
+    <!-- ======= Sobre Section ======= -->
+    <?php include("assets/components/about-us.php") ?>
+    <!-- End Sobre Section -->
     <? include("assets/components/faq.php") ?>
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">

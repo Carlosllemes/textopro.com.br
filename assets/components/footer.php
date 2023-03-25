@@ -25,7 +25,8 @@
                         <li><i class="bx bx-chevron-right"></i> <a href="#sobre">Quem somos</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="#solucoes">Serviços</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="#faq">FAQ</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>">Política de privacidade</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>blog">Blog</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>mapa-site">Mapa do site</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 footer-links">
@@ -50,8 +51,7 @@
     </div>
 
     <div class="fixed-bottom whatsapp-btn">
-        <span class="cta-whatsapp">Faça um orçamento agóra</span>
-        <a target="_blank" href="#" id="whatsapp-button" class="mb-5 m-2 btn btn-primary btn-lg">
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=5511951048219&text=%22Ol%C3%A1,%20tudo%20bem?%20Gostaria%20de%20saber%20mais%20sobre%20os%20conte%C3%BAdos%20que%20voc%C3%AAs%20oferecem.%22%0A%0A" class="whatsapp-button mb-5 m-2 btn btn-primary btn-lg">
             <i class='bx bxl-whatsapp bx-lg'></i> WhatsApp
         </a>
     </div>
@@ -76,34 +76,18 @@
 <script>
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     var url = isMobile ? 'https://api.whatsapp.com/send?phone=5511951048219&text=%22Ol%C3%A1,%20tudo%20bem?%20Gostaria%20de%20saber%20mais%20sobre%20os%20conte%C3%BAdos%20que%20voc%C3%AAs%20oferecem.%22%0A%0A' : 'https://web.whatsapp.com/send?phone=5511951048219&text=%22Ol%C3%A1,%20tudo%20bem?%20Gostaria%20de%20saber%20mais%20sobre%20os%20conte%C3%BAdos%20que%20voc%C3%AAs%20oferecem.%22%0A%0A';
-    document.getElementById('whatsapp-button').href = url;
+    document.getElementById('wp-btn').href = url;
 </script>
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "TextoPro",
-        "logo": "https://www.textopro.com.br/logo.png",
-        "url": "https://www.textopro.com.br",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Rua Expedito de Oliveira Santos 451, Parque Santo",
-            "addressLocality": "São Paulo",
-            "postalCode": "05821050",
-            "addressCountry": "BR"
-        },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-            ],
-            "opens": "09:00",
-            "closes": "18:00"
-        }
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8MFNHM6P2L"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
     }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8MFNHM6P2L');
 </script>

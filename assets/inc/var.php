@@ -13,7 +13,7 @@ $slogan           = 'Palavras que conectam e transformam.';
 $ddd           = '11';
 $phone[0]          = array($ddd, '95104-8219', 'phone');
 $whatsapp          = $ddd . '95104-8219';
-$email     = 'carlostextopro@gmail.com';
+$email     = 'contato@textopro.com.br';
 $rua           = 'Rua Expedito de Oliveira Santos 451';
 $bairro           = 'Characara Santana';
 $cidade           = 'São Paulo';
@@ -33,3 +33,7 @@ define('RAIZ', $url);
 define('HTACCESS', $urlhtaccess);
 include('assets/inc/gerador-htaccess.php');
 // ********************FIM COM SIG APAGAR********************
+$explode            = explode("/", $_SERVER['REQUEST_URI']);
+$urlPagina             = end($explode);
+$urlPagina             = str_replace('.php', '', $urlPagina);
+$urlPagina             == "index" ? $urlPagina = "" : "";

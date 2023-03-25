@@ -2,10 +2,13 @@
   <div class="container" data-aos="fade-up">
     <div class="row">
       <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-        <img src="<?= $url ?>assets/img/about.jpg" class="w-100" alt="">
+        <img src="<?= $url ?>assets/img/about.jpg" class="w-75" alt="<?= $title ?>">
       </div>
       <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-        <h3>Quem somos</h3>
+        <div class="section-title">
+          <h2>Quem somos</h2>
+          <p>Conheça a TextoPro.</p>
+        </div>
         <p>
           A <strong>TextoPro</strong> foi criada em um momento desafiador para o mundo, durante a pandemia do COVID-19, por um grupo de amigos apaixonados por tecnologia e escrita. Durante suas conversas em vídeo chamada, perceberam a necessidade de conteúdo de qualidade e acessível para todos.
         </p>
@@ -22,9 +25,10 @@
         <br><br>
       </div>
       <div class="col-lg-12 pt-4 pt-lg-0 order-3 order-lg-3 content" data-aos="fade-right" data-aos-delay="100">
-        <h2>Nossos valores</h2>
+        <div class="section-title m-0 p-0">
+          <p>Nossos Valores</p>
+        </div>
         <div class="col-lg-12 pt-4 pt-lg-0 order-3 order-lg-3 content" data-aos="fade-right" data-aos-delay="100">
-          <hr class="clear">
           <ul>
             <li><i class="ri-check-double-line"></i> Inovação: Aqui na nossa empresa, valorizamos a inovação. Buscamos sempre novas ideias e corremos riscos calculados para criar soluções que promovam a prosperidade, tanto para nossos clientes como para nossa empresa.</li>
             <li><i class="ri-check-double-line"></i> Integridade: Nós agimos com honestidade e transparência em todas as interações. Construímos relacionamentos baseados em confiança e respeito, garantindo que nossos valores éticos sejam mantidos em todas as ações.</li>

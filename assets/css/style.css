@@ -89,6 +89,7 @@
   }
 
 
+
   /*--------------------------------------------------------------
   # Preloader
   --------------------------------------------------------------*/
@@ -166,7 +167,7 @@
     border-radius: 10px;
     padding: 5px;
     box-sizing: border-box;
-
+    height: 400px;
   }
 
 
@@ -255,7 +256,7 @@
     position: relative;
   }
 
-  #whatsapp-button {
+  .whatsapp-button {
     border-radius: 50%;
     animation: blink 2s ease-in-out infinite;
     height: 110px;
@@ -577,7 +578,7 @@
   # Sections General
   --------------------------------------------------------------*/
   section {
-    padding: 60px 0;
+    padding: 35px 0;
     overflow: hidden;
   }
 
@@ -815,6 +816,20 @@
   }
 
   /* CUSTOM */
+  .container.post-blog p {
+    line-height: 35px;
+  }
+
+  .container.aos-init.aos-animate nav {
+    font-size: 20px;
+    width: 124%;
+  }
+
+  .container.post-blog h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 23px;
+  }
 
   .whatsapp-btn {
     width: 10%;
@@ -1671,6 +1686,7 @@
 
   li.breadcrumb-item.active {
     color: white;
+    font-size: 20px;
   }
 
   section#hero.bread {
@@ -1693,3 +1709,241 @@
     margin: 0;
     font-weight: 100;
   }
+
+  /* PLANS */
+
+  /*pricing plans*/
+  #pricing-plans {
+    background-color: #f1f1f1;
+  }
+
+  #pricing-plans .section-title {
+    padding: 0;
+  }
+
+  #pricing-plans .col-all {
+    padding: 0;
+  }
+
+  #pricing-plans .title-area h4 {
+    padding-bottom: 5px;
+  }
+
+  #pricing-plans .pricing-area h3 {
+    color: #ffc451;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+
+  #pricing-plans .features-area {
+    min-height: 180px;
+  }
+
+  #pricing-plans .tio-cta-orange {
+    max-width: 240px;
+  }
+
+  #pricing-plans sub {
+    font-size: 16px;
+    bottom: -.15em;
+  }
+
+  #pricing-plans .standard-plan,
+  #pricing-plans .vip-plan {
+    padding: 20px 40px;
+    background-color: #ffffff;
+  }
+
+
+  #pricing-plans .standard-plan {
+    position: relative;
+    min-height: 749px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+
+  #pricing-plans .standard-plan:before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 505px;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: #868a8a33;
+  }
+
+  #pricing-plans .all-plans:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #ffc451;
+    transition: 0.5s;
+  }
+
+
+  #pricing-plans .all-plans:hover:after {
+    width: 100%;
+  }
+
+  #pricing-plans .vipBlack-plan {
+    padding: 20px 40px;
+    background-color: #000000;
+    color: #ffffff;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+
+  [data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  /* Hide the tooltip content by default */
+  [data-tooltip]:before,
+  [data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Position tooltip above the element */
+  [data-tooltip]:before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px 2px;
+    width: 154px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  [data-tooltip]:lang(ar)::before {
+    margin-left: -20px;
+  }
+
+  /* Triangle hack to make tooltip look like a speech bubble */
+  [data-tooltip]:after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+  }
+
+  /* Show tooltip content on hover */
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
+
+  .tio-cta-orange {
+    padding: 8px 20px;
+    border-radius: 30px;
+    background-color: #ffc451;
+    border: 2px solid #ffc451;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    width: 100%;
+    transition: .3s all ease;
+
+  }
+
+  .tio-cta-orange:hover {
+    color: #ffc451;
+    background-color: transparent;
+    border: 2px solid #ffc451;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .tio-anchor {
+    color: #ffc451;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+  }
+
+  .tio-anchor:hover {
+    color: #ffc451;
+    border-bottom: 1px solid #ffc451;
+    text-decoration: none;
+  }
+
+  #pricing-plans .vipBlack-plan .tio-cta-orange {
+    color: #000000;
+    font-weight: 700;
+  }
+
+  #pricing-plans .vipBlack-plan .tio-cta-orange:hover {
+    color: #ffc451;
+    font-weight: 700;
+  }
+
+  #pricing-plans .vipBlack-plan .pricing-area h3 {
+    color: #ffffff;
+  }
+
+  #pricing-plans .vipBlack-plan .features-area {
+    min-height: 260px;
+  }
+
+  #pricing-plans .vipBlack-plan .text-muted {
+    color: #9ca2a9 !important;
+  }
+
+  @media only screen and (max-width: 991px) {
+    #pricing-plans .col-all {
+      margin: 20px auto 20px;
+      max-width: 400px;
+
+    }
+
+    #pricing-plans .all-plans {
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    #pricing-plans .standard-plan:before {
+      display: none;
+    }
+  }
+
+  /*end of pricing plans*/

@@ -5,7 +5,7 @@
 
    <?php include("assets/inc/var.php") ?>
    <meta charset="UTF-8">
-   <title>Textopro - O melhor serviço de criação de conteúdo</title>
+   <title><?= $title ?></title>
    <meta name="description" content="<?= $desc ?>">
    <meta name="keywords" content="TextoPro - <?= $title ?>">
    <meta name="author" content="TextoPro">

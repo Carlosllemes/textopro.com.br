@@ -7,7 +7,6 @@ $subpageLink = "blog";
 $desc = " Descubra a plataforma Textopro e adquira blogs e conteúdo de qualidade para o seu negócio. Economize tempo e aumente o tráfego do seu site. Compre agora mesmo!";
 include("assets/inc/head.php");
 ?>
-
 </head>
 
 <body>
@@ -22,9 +21,9 @@ include("assets/inc/head.php");
         <section class="row">
             <h1 class="mb-5"><?= $h1 ?></h1>
             <article class="col-9 blog-article">
-                <img class="mb-5" title="<?= $h1 ?>" alt="<?= $h1 ?>" src="<?= $url ?>assets/img/blog/comprar-blogs-conteudo-01.jpg">
                 <h2>Introdução</h2>
                 <p>Os donos de sites sabem que, para se destacarem na internet, é preciso ter um bom conteúdo e uma estratégia de marketing digital eficiente. Com a crescente concorrência online, ter um blog atualizado e conteúdo de qualidade é essencial para atrair e manter o interesse do público-alvo. No entanto, muitos empresários não têm tempo ou recursos para produzir um conteúdo de qualidade, o que pode afetar o desempenho de seus sites. Neste texto, vamos discutir a importância de comprar blog e conteúdo e como essa estratégia pode ajudar a impulsionar os resultados do seu negócio.</p>
+                <img class="mb-5 w-100" title="<?= $h1 ?>" alt="<?= $h1 ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg">
                 <h2>Forneça informações mais detalhadas</h2>
                 <p>Comprar blog e conteúdo é uma estratégia cada vez mais utilizada por empresários que buscam se destacar no mercado digital. Essa prática consiste em adquirir um blog já existente, com conteúdo relevante para o público-alvo, e/ou investir na produção de conteúdo por meio de uma agência especializada ou profissional freelancer.</p>
                 <ul>
@@ -64,6 +63,7 @@ include("assets/inc/head.php");
     </div>
     <!-- End #main -->
     <!-- ======= Footer ======= -->
+    <? include('assets/components/plans.php') ?>
     <? include('assets/components/footer.php') ?>
     <!-- End Footer -->
 
@@ -71,24 +71,26 @@ include("assets/inc/head.php");
 
 </html>
 
-<script type="application/ld+json">
+<script type="json">
     {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "<?= $h1 ?>",
-        "datePublished": "2023-03-11",
-        "author": {
-            "@type": "Person",
-            "name": "TextoPro"
-        },
-        "image": "<?= $url ?>assets/img/blog/<?= $caminho ?>-01.jpg",
-        "publisher": {
-            "@type": "Organization",
-            "name": "TextoPro",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "<?= $url ?>assets/img/blog/<?= $caminho ?>-01.jpg"
-            }
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "<?= $h1 ?>",
+    "datePublished": "2023-03-11",
+    "author": {
+        "@type": "Person",
+        "name": "TextoPro",
+        "url": "https://www.linkedin.com/in/carlos-lemes-43a38a120/"
+    },
+    "image": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg",
+    "publisher": {
+        "@type": "Organization",
+        "name": "TextoPro",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg"
         }
     }
+}
+
 </script>

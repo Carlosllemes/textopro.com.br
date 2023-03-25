@@ -15,24 +15,24 @@
 
     <IfModule mod_rewrite.c>
       
-        RewriteCond %{http_host} ^localhost/textopro.com.br [NC]
-        RewriteRule ^(.*)$ http://localhost/textopro.com.br/$1 [r=301,NC]
-        RewriteRule ^index.php$ http://localhost/textopro.com.br/ [r=301,NC,L]
+        RewriteCond %{http_host} ^www.textopro.com.br [NC]
+        RewriteRule ^(.*)$ https://www.textopro.com.br/$1 [r=301,NC]
+        RewriteRule ^index.php$ https://www.textopro.com.br/ [r=301,NC,L]
 
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteCond %{REQUEST_FILENAME}.php -f
         RewriteRule ^(.*)$ $1.php
 
         #redirects 
-        #redirect 301 /produto http://localhost/textopro.com.br/produtos
+        #redirect 301 /produto https://www.textopro.com.br/produtos
 
     </IfModule>
 
     # Exibe página não encontrada se url não existir
-    errordocument 404 http://localhost/textopro.com.br/404
+    errordocument 404 https://www.textopro.com.br/404
 
     # Redireciona erro 403 para página 404
-    errordocument 403 http://localhost/textopro.com.br/404
+    errordocument 403 https://www.textopro.com.br/404
 
     # Exibe 404 para uma reescrita se uma pasta de mesmo nome não existir
     Options -MultiViews

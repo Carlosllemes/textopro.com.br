@@ -24,7 +24,7 @@ include("assets/inc/head.php");
             <h1 itemprop="headline"><?= $h1 ?></h1>
             <article class="col-9 blog-article">
                 <p>As mídias sociais são uma parte importante da presença online de qualquer empresa. Elas ajudam a promover sua marca, aumentar o engajamento do público e gerar leads. No entanto, a criação de conteúdo de qualidade para as redes sociais pode ser desafiadora e muitas empresas optam por terceirizar essa tarefa para uma agência de conteúdo especializada, como a Texto Pro. Neste guia completo, abordaremos tudo o que você precisa saber sobre o preço de conteúdo para mídias sociais.</p>
-                <img class="mb-5 w-100" title="<?= $h1 ?>" alt="<?= $h1 ?>" src="<?= $url ?>assets/img/blog/<?= $caminho  ?>-01.jpg">
+                <img class="mb-5 w-100" title="<?= $h1 ?>" alt="<?= $h1 ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg">
 
                 <h2 itemprop="headline">Qual é o preço médio de conteúdo para mídias sociais?</h2>
                 <p>O preço de conteúdo para mídias sociais varia muito, dependendo da agência e do tipo de conteúdo que você precisa. Algumas agências oferecem pacotes mensais que incluem uma quantidade específica de postagens por mês, enquanto outras cobram por postagem individual. Os preços também podem variar dependendo da complexidade do conteúdo. Conteúdo mais simples, como postagens de texto curto, pode custar menos do que conteúdo mais complexo, como vídeos ou infográficos.</p>
@@ -96,7 +96,9 @@ include("assets/inc/head.php");
     </div>
     <!-- End #main -->
     <!-- ======= Footer ======= -->
+    <? include('assets/components/plans.php') ?>
     <? include('assets/components/footer.php') ?>
+    <? include('assets/components/schemas.php') ?>
     <!-- End Footer -->
 
 </body>
@@ -111,15 +113,16 @@ include("assets/inc/head.php");
         "datePublished": "2023-03-11",
         "author": {
             "@type": "Person",
-            "name": "TextoPro"
+            "name": "TextoPro",
+            "url": "https://www.linkedin.com/in/carlos-lemes-43a38a120/"
         },
-        "image": "<?= $url ?>assets/img/blog/<?= $caminho ?>-01.jpg",
+        "image": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg",
         "publisher": {
             "@type": "Organization",
             "name": "TextoPro",
             "logo": {
                 "@type": "ImageObject",
-                "url": "<?= $url ?>assets/img/blog/<?= $caminho ?>-01.jpg"
+                "url": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg"
             }
         }
     }
