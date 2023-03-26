@@ -21,16 +21,18 @@ include("assets/inc/head.php");
     <div class="container post-blog">
         <section itemscope itemtype="https://schema.org/BlogPosting" class="row">
 
-            <h1 itemprop="headline"><?= $h1 ?></h1>
+            <h1><?= $h1 ?></h1>
             <article class="col-9 blog-article">
+                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:70%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
                 <p>Quando uma empresa lança um novo produto ou serviço no mercado, é importante que ela apresente informações detalhadas sobre seus recursos e benefícios. Essas informações ajudam os clientes potenciais a entender o que o produto ou serviço oferece e por que eles deveriam comprá-lo. No entanto, nem todas as empresas têm a expertise ou o tempo necessário para criar descrições de produtos e serviços eficazes. É aí que entra uma empresa de descrições de produtos e serviços.</p>
                 <p>Neste artigo, vamos explorar o que é uma empresa de descrições de produtos e serviços, como ela pode ajudar outras empresas e quais são as melhores práticas para trabalhar com elas.</p>
-                <img class="mb-5 w-100" title="<?= $h1 ?>" alt="<?= $h1 ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp">
+                <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp">
 
-                <h2 itemprop="headline">O que é uma empresa de descrições de produtos e serviços</h2>
+
+                <h2>O que é uma empresa de descrições de produtos e serviços</h2>
                 <p>Uma empresa de descrições de produtos e serviços é uma agência que se especializa em criar conteúdo detalhado e persuasivo sobre produtos e serviços. Essa empresa trabalha em estreita colaboração com outras empresas para entender seus produtos ou serviços e, em seguida, criar descrições que informem e envolvam seus clientes potenciais.</p>
 
-                <h2 itemprop="headline">Como uma empresa de descrições de produtos e serviços pode ajudar outras empresas?</h2>
+                <h2>Como uma empresa de descrições de produtos e serviços pode ajudar outras empresas?</h2>
                 <p>Uma empresa de descrições de produtos e serviços pode ajudar outras empresas de várias maneiras, incluindo:</p>
                 <ol>
                     <li>Economizando tempo e recursos
@@ -45,7 +47,7 @@ include("assets/inc/head.php");
                         <p>Uma empresa de descrições de produtos e serviços tem a expertise necessária para criar descrições de alta qualidade que apresentem os recursos e benefícios de um produto ou serviço de forma clara e persuasiva. Essas descrições ajudam os clientes potenciais a entender o valor do produto ou serviço e por que eles deveriam comprá-lo.</p>
                     </li>
                 </ol>
-                <h2 itemprop="headline">
+                <h2>
                     Quais são as melhores práticas para trabalhar com uma empresa de descrições de produtos e serviços?
                 </h2>
                 <p>
@@ -69,7 +71,7 @@ include("assets/inc/head.php");
                         <p>As empresas devem revisar cuidadosamente todas as descrições criadas pela empresa de descrições de produtos e serviços e fornecer feedback claro e útil. Isso ajudará a garantir que as descrições atendam às suas necessidades e expectativas e que qualquer problema seja resolvido rapidamente.</p>
                     </li>
                 </ol>
-                <h2 itemprop="headline">Conclusão</h2>
+                <h2>Conclusão</h2>
                 <p>Uma empresa de descrições de produtos e serviços pode ajudar outras empresas a criar descrições eficazes que atraiam e envolvam clientes potenciais. Ao seguir as melhores práticas ao trabalhar com essas empresas, as empresas podem garantir que obtenham descrições de alta qualidade que apresentem seus produtos ou serviços de maneira clara e persuasiva.</p>
 
 
@@ -125,31 +127,9 @@ include("assets/inc/head.php");
     <!-- ======= Footer ======= -->
     <? include('assets/components/plans.php') ?>
     <? include('assets/components/footer.php') ?>
+    <? include('assets/components/schemas.php') ?>
     <!-- End Footer -->
 
 </body>
 
 </html>
-
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "<?= $h1 ?>",
-        "datePublished": "2023-03-21",
-        "author": {
-            "@type": "Person",
-            "name": "TextoPro",
-            "url": "https://www.linkedin.com/in/carlos-lemes-43a38a120/"
-        },
-        "image": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp",
-        "publisher": {
-            "@type": "Organization",
-            "name": "TextoPro",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp"
-            }
-        }
-    }
-</script>

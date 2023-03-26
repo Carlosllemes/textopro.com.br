@@ -91,3 +91,38 @@
 
     gtag('config', 'G-8MFNHM6P2L');
 </script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://www.textopro.com.br",
+        "logo": "https://www.textopro.com.br/assets/img/logo.png"
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "image": [
+            "https://www.textopro.com.br/assets/img/blog/roteiros-videos-podcasts-preco-01.jpg",
+            "https://www.textopro.com.br/assets/img/blog/comprar-emails-newsletters-01.webp"
+        ],
+        "name": "TextoPro.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Expedito de oliveira santos",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "postalCode": "05825030",
+            "addressCountry": "BR"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "TextoPro."
+        },
+        "url": "https://www.google.com/maps/place/R.+Expedito+de+Oliveira+Santos+-+Parque+Santo+Ant%C3%B4nio,+S%C3%A3o+Paulo+-+SP,+05821-050/@-23.6673056,-46.7511983,18z/data=!4m15!1m8!3m7!1s0x94ce522b13af0d29:0x437002fea8aad9e2!2sR.+Expedito+de+Oliveira+Santos+-+Parque+Santo+Ant%C3%B4nio,+S%C3%A3o+Paulo+-+SP,+05821-050!3b1!8m2!3d-23.6673069!4d-46.7506283!16s%2Fg%2F1ymspckh2!3m5!1s0x94ce522b13af0d29:0x437002fea8aad9e2!8m2!3d-23.6673069!4d-46.7506283!16s%2Fg%2F1ymspckh2",
+        "telephone": "+551195104819",
+        "servesCuisine": "Brasil",
+        "priceRange": "1.190,00"
+    }
+</script>

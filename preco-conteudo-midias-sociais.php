@@ -4,7 +4,7 @@ $title = "Textopro - Preço de conteúdo para mídias sociais: guia completo";
 $subpage = "Blog";
 $h1 = "Preço de conteúdo para mídias sociais: guia completo";
 $subpageLink = "blog";
-$desc = " Descubra a plataforma Textopro e adquira blogs e conteúdo de qualidade para o seu negócio. Economize tempo e aumente o tráfego do seu site. Compre agora mesmo!";
+$desc = "Quer saber quanto custa conteúdo para suas mídias sociais? Nós temos todas as respostas neste guia completo! Descubra agora e comece a lucrar online!";
 include("assets/inc/head.php");
 ?>
 
@@ -21,16 +21,17 @@ include("assets/inc/head.php");
     <div class="container post-blog">
         <section itemscope itemtype="https://schema.org/BlogPosting" class="row">
 
-            <h1 itemprop="headline"><?= $h1 ?></h1>
+            <h1><?= $h1 ?></h1>
             <article class="col-9 blog-article">
+                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:70%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
                 <p>As mídias sociais são uma parte importante da presença online de qualquer empresa. Elas ajudam a promover sua marca, aumentar o engajamento do público e gerar leads. No entanto, a criação de conteúdo de qualidade para as redes sociais pode ser desafiadora e muitas empresas optam por terceirizar essa tarefa para uma agência de conteúdo especializada, como a Texto Pro. Neste guia completo, abordaremos tudo o que você precisa saber sobre o preço de conteúdo para mídias sociais.</p>
-                <img class="mb-5 w-100" title="<?= $h1 ?>" alt="<?= $h1 ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg">
+                <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg">
 
-                <h2 itemprop="headline">Qual é o preço médio de conteúdo para mídias sociais?</h2>
+                <h2>Qual é o preço médio de conteúdo para mídias sociais?</h2>
                 <p>O preço de conteúdo para mídias sociais varia muito, dependendo da agência e do tipo de conteúdo que você precisa. Algumas agências oferecem pacotes mensais que incluem uma quantidade específica de postagens por mês, enquanto outras cobram por postagem individual. Os preços também podem variar dependendo da complexidade do conteúdo. Conteúdo mais simples, como postagens de texto curto, pode custar menos do que conteúdo mais complexo, como vídeos ou infográficos.</p>
                 <p>Na Texto Pro, oferecemos pacotes mensais que incluem um determinado número de postagens por mês, com preços a partir de R$50. Esses pacotes podem ser personalizados de acordo com as necessidades de cada cliente e incluem serviços de gerenciamento de redes sociais, como monitoramento e interação com os seguidores.</p>
 
-                <h2 itemprop="headline">O que influencia o preço de conteúdo para mídias sociais?</h2>
+                <h2>O que influencia o preço de conteúdo para mídias sociais?</h2>
                 <p>Há vários fatores que influenciam o preço de conteúdo para mídias sociais. Aqui estão alguns dos principais:</p>
                 <ul>
                     <li>Tipo de conteúdo: como mencionado anteriormente, o tipo de conteúdo afeta o preço. Conteúdo mais complexo, como vídeos ou infográficos, geralmente custa mais do que postagens de texto curto.</li>
@@ -40,7 +41,7 @@ include("assets/inc/head.php");
                     <li>Prazo de entrega: se você precisar de um conteúdo com urgência, pode ter que pagar mais para garantir que ele seja entregue no prazo.</li>
                 </ul>
 
-                <h2 itemprop="headline">Por que terceirizar a criação de conteúdo para mídias sociais?</h2>
+                <h2>Por que terceirizar a criação de conteúdo para mídias sociais?</h2>
                 <p>Muitas empresas optam por terceirizar a criação de conteúdo para mídias sociais por vários motivos. Aqui estão alguns dos principais benefícios:</p>
                 <ul>
                     <li>Economia de tempo: a criação de conteúdo para mídias sociais pode ser demorada e trabalhosa. Terceirizar essa tarefa permite que as empresas foquem em outras áreas importantes do negócio.</li>
@@ -104,26 +105,3 @@ include("assets/inc/head.php");
 </body>
 
 </html>
-
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "<?= $h1 ?>",
-        "datePublished": "2023-03-11",
-        "author": {
-            "@type": "Person",
-            "name": "TextoPro",
-            "url": "https://www.linkedin.com/in/carlos-lemes-43a38a120/"
-        },
-        "image": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg",
-        "publisher": {
-            "@type": "Organization",
-            "name": "TextoPro",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg"
-            }
-        }
-    }
-</script>

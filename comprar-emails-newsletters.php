@@ -1,10 +1,10 @@
 <?php
 $tituloPagina = "Comprar e-mails e newsletters: É uma boa ideia?";
-$title = "Textopro - Aumente suas vendas com descrições matadoras de produtos e serviços!";
+$title = "Textopro - Comprar e-mails e newsletters: É uma boa ideia? Descubra agora!";
 $subpage = "Blog";
 $h1 = "Comprar e-mails e newsletters: É uma boa ideia?";
 $subpageLink = "blog";
-$desc = "Você sabia que descrições bem escritas podem aumentar suas vendas em até 300%? Nossa empresa de descrições de produtos e serviços pode te ajudar a alcançar esse resultado! Entre em contato agora.";
+$desc = "Você está pensando em comprar listas de e-mails e newsletters? Antes de tomar uma decisão, leia este artigo e descubra se essa é uma boa ideia. Saiba mais aqui!";
 include("assets/inc/head.php");
 ?>
 
@@ -21,16 +21,18 @@ include("assets/inc/head.php");
     <div class="container post-blog">
         <section itemscope itemtype="https://schema.org/BlogPosting" class="row">
 
-            <h1 itemprop="headline"><?= $h1 ?></h1>
+            <h1><?= $h1 ?></h1>
             <article class="col-9 blog-article">
+                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:70%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
                 <p>Se você está buscando maneiras de expandir sua lista de e-mails e newsletters, pode ser tentador comprar uma lista pronta de contatos para acelerar o processo. No entanto, essa prática pode ter consequências negativas para sua empresa, como prejudicar sua reputação e afetar a eficácia de suas campanhas de marketing por e-mail. Neste artigo, vamos explorar os prós e contras de comprar e-mails e newsletters e fornecer algumas alternativas para expandir sua lista de contatos organicamente.</p>
 
-                <img class="mb-5 w-100" title="<?= $h1 ?>" alt="<?= $h1 ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp">
+                <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp">
 
-                <h2 itemprop="headline">O que são e-mails e newsletters comprados?</h2>
+
+                <h2>O que são e-mails e newsletters comprados?</h2>
                 <p>E-mails e newsletters comprados são listas de endereços de e-mail que são vendidas por empresas especializadas em coletar e vender informações de contato. Essas empresas geralmente obtêm essas listas através de meios questionáveis, como a extração de endereços de e-mail de sites ou a compra de listas roubadas.</p>
 
-                <h2 itemprop="headline">Por que comprar e-mails e newsletters não é uma boa ideia?</h2>
+                <h2>Por que comprar e-mails e newsletters não é uma boa ideia?</h2>
                 <p>Comprar listas de e-mails e newsletters pode parecer uma maneira rápida de obter mais contatos para sua empresa, mas essa prática tem várias desvantagens importantes:</p>
                 <ol>
                     <li>Violação de privacidade
@@ -53,7 +55,7 @@ include("assets/inc/head.php");
                         </p>
                     </li>
                 </ol>
-                <h2 itemprop="headline">
+                <h2>
                     Alternativas para expandir sua lista de e-mails e newsletters organicamente
                 </h2>
                 <p>
@@ -81,7 +83,7 @@ include("assets/inc/head.php");
                         <p>Ofereça descontos exclusivos para seus assinantes de e-mail e incentive-os a compartilhar sua lista com amigos e familiares</p>
                     </li>
                 </ol>
-                <h2 itemprop="headline">Conclusão</h2>
+                <h2>Conclusão</h2>
                 <p>Comprar listas de e-mails e newsletters pode parecer uma maneira rápida e fácil de expandir sua lista de contatos, mas pode ter consequências negativas significativas para sua empresa. Além de violar a privacidade dos usuários, isso pode prejudicar sua reputação e afetar a eficácia de suas campanhas de marketing por e-mail. Em vez disso, considere as alternativas mencionadas acima para expandir sua lista de e-mails organicamente e criar um público engajado e valioso.</p>
 
                 <h2>Perguntas frequentes</h2>
@@ -140,31 +142,10 @@ include("assets/inc/head.php");
     <!-- ======= Footer ======= -->
     <? include('assets/components/plans.php') ?>
     <? include('assets/components/footer.php') ?>
+    <? include('assets/components/schemas.php') ?>
+
     <!-- End Footer -->
 
 </body>
 
 </html>
-
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "<?= $h1 ?>",
-        "datePublished": "2023-03-21",
-        "author": {
-            "@type": "Person",
-            "name": "TextoPro",
-            "url": "https://www.linkedin.com/in/carlos-lemes-43a38a120/"
-        },
-        "image": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp",
-        "publisher": {
-            "@type": "Organization",
-            "name": "TextoPro",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp"
-            }
-        }
-    }
-</script>
