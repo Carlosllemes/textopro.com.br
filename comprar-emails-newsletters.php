@@ -1,5 +1,5 @@
 <?php
-$tituloPagina = "Comprar e-mails e newsletters: É uma boa ideia?";
+$tituloPagina = "Comprar e-mails e newsletters";
 $title = "Textopro - Comprar e-mails e newsletters: É uma boa ideia? Descubra agora!";
 $subpage = "Blog";
 $h1 = "Comprar e-mails e newsletters: É uma boa ideia?";
@@ -22,8 +22,8 @@ include("assets/inc/head.php");
         <section itemscope itemtype="https://schema.org/BlogPosting" class="row">
 
             <h1><?= $h1 ?></h1>
-            <article class="col-9 blog-article">
-                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:70%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
+            <article class="col-12 col-md-9 col-sm-9 col-xl-9 blog-article">
+                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:90%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
                 <p>Se você está buscando maneiras de expandir sua lista de e-mails e newsletters, pode ser tentador comprar uma lista pronta de contatos para acelerar o processo. No entanto, essa prática pode ter consequências negativas para sua empresa, como prejudicar sua reputação e afetar a eficácia de suas campanhas de marketing por e-mail. Neste artigo, vamos explorar os prós e contras de comprar e-mails e newsletters e fornecer algumas alternativas para expandir sua lista de contatos organicamente.</p>
 
                 <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp">

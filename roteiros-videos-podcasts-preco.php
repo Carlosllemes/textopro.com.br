@@ -1,5 +1,5 @@
 <?php
-$tituloPagina = "Roteiros para vídeos e podcasts: O que você precisa saber sobre preços";
+$tituloPagina = "Roteiros para vídeos e podcasts";
 $title = "Textopro - Aumente suas vendas com descrições matadoras de produtos e serviços!";
 $subpage = "Blog";
 $datePublished = "23-03-21";
@@ -22,12 +22,12 @@ include("assets/inc/head.php");
     <div class="container post-blog">
         <section class="row">
             <h1><?= $h1 ?></h1>
-            <article class="col-9 blog-article">
+            <article class="col-12 col-md-9 col-sm-9 col-xl-9 blog-article">
 
-                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:70%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
+                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:90%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
                 <p>Se você está planejando criar um vídeo ou podcast, uma das primeiras coisas que você precisa pensar é no roteiro. O roteiro é o que vai guiar o seu conteúdo e torná-lo mais atrativo para o seu público-alvo. Mas, quanto custa um roteiro para vídeos e podcasts? Neste artigo, vamos falar sobre tudo o que você precisa saber sobre preços de roteiros para vídeos e podcasts.</p>
 
-                <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg">
+                <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp">
 
                 <h2>O que é um roteiro?</h2>
                 <p>Antes de discutirmos os preços, vamos entender o que é um roteiro. Um roteiro é um documento que contém a descrição detalhada de tudo o que acontecerá em um vídeo ou podcast. Ele inclui o diálogo dos apresentadores ou entrevistados, a trilha sonora, os efeitos sonoros, as transições e tudo mais que for necessário para tornar o conteúdo mais envolvente.</p>

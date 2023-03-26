@@ -44,7 +44,7 @@ while ($row = mysqli_fetch_assoc($result))
     $mail->Body    = $body;
     $mail->AltBody = $text_body;
     $mail->addAddress($row['email'], $row['full_name']);
-    $mail->addStringAttachment($row['photo'], 'YourPhoto.jpg');
+    $mail->addStringAttachment($row['photo'], 'YourPhoto.webp');
 
     if(!$mail->send())
         echo "There has been a mail error sending to " . $row['email'] . "&lt;br&gt;";

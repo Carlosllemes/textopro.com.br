@@ -104,7 +104,7 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "image": [
-            "https://www.textopro.com.br/assets/img/blog/roteiros-videos-podcasts-preco-01.jpg",
+            "https://www.textopro.com.br/assets/img/blog/roteiros-videos-podcasts-preco-01.webp",
             "https://www.textopro.com.br/assets/img/blog/comprar-emails-newsletters-01.webp"
         ],
         "name": "TextoPro.",

@@ -22,8 +22,8 @@ include("assets/inc/head.php");
         <section itemscope itemtype="https://schema.org/BlogPosting" class="row">
 
             <h1><?= $h1 ?></h1>
-            <article class="col-9 blog-article">
-                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:70%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
+            <article class="col-12 col-md-9 col-sm-9 col-xl-9 blog-article">
+                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:90%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
                 <p>Quando uma empresa lança um novo produto ou serviço no mercado, é importante que ela apresente informações detalhadas sobre seus recursos e benefícios. Essas informações ajudam os clientes potenciais a entender o que o produto ou serviço oferece e por que eles deveriam comprá-lo. No entanto, nem todas as empresas têm a expertise ou o tempo necessário para criar descrições de produtos e serviços eficazes. É aí que entra uma empresa de descrições de produtos e serviços.</p>
                 <p>Neste artigo, vamos explorar o que é uma empresa de descrições de produtos e serviços, como ela pode ajudar outras empresas e quais são as melhores práticas para trabalhar com elas.</p>
                 <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp">

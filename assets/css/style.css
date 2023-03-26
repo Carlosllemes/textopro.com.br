@@ -476,7 +476,7 @@
   #hero {
     width: 100%;
     height: 100vh;
-    background: url("../img/hero-bg.jpg") top center;
+    background: url("../img/hero-bg.webp") top center;
     background-size: cover;
     position: relative;
   }
@@ -780,7 +780,7 @@
   # Cta
   --------------------------------------------------------------*/
   .cta {
-    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.webp") fixed center center;
     background-size: cover;
     padding: 60px 0;
   }
@@ -1099,7 +1099,7 @@
   }
 
   .counts .image {
-    background: url("../img/counts-img.jpg") center center no-repeat;
+    background: url("../img/counts-img.webp") center center no-repeat;
     background-size: cover;
     min-height: 400px;
   }
@@ -1125,7 +1125,7 @@
   --------------------------------------------------------------*/
   .testimonials {
     padding: 80px 0;
-    background: url("../img/testimonials-bg.jpg") no-repeat;
+    background: url("../img/testimonials-bg.webp") no-repeat;
     background-position: center center;
     background-size: cover;
     position: relative;

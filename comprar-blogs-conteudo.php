@@ -20,11 +20,11 @@ include("assets/inc/head.php");
     <div class="container post-blog">
         <section class="row">
             <h1><?= $h1 ?></h1>
-            <article class="col-9 blog-article">
-                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:70%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
+            <article class="col-12 col-md-9 col-sm-9 col-xl-9 blog-article">
+                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:90%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
                 <h2>Introdução</h2>
                 <p>Os donos de sites sabem que, para se destacarem na internet, é preciso ter um bom conteúdo e uma estratégia de marketing digital eficiente. Com a crescente concorrência online, ter um blog atualizado e conteúdo de qualidade é essencial para atrair e manter o interesse do público-alvo. No entanto, muitos empresários não têm tempo ou recursos para produzir um conteúdo de qualidade, o que pode afetar o desempenho de seus sites. Neste texto, vamos discutir a importância de comprar blog e conteúdo e como essa estratégia pode ajudar a impulsionar os resultados do seu negócio.</p>
-                <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg">
+                <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp">
 
                 <h2>Forneça informações mais detalhadas</h2>
                 <p>Comprar blog e conteúdo é uma estratégia cada vez mais utilizada por empresários que buscam se destacar no mercado digital. Essa prática consiste em adquirir um blog já existente, com conteúdo relevante para o público-alvo, e/ou investir na produção de conteúdo por meio de uma agência especializada ou profissional freelancer.</p>

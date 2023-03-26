@@ -2,7 +2,7 @@
     {
         "@context": "https://schema.org/",
         "@type": "ImageObject",
-        "contentUrl": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg",
+        "contentUrl": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp",
         "license": "",
         "acquireLicensePage": "",
         "creditText": "Image Database",
@@ -25,13 +25,13 @@
             "name": "<?= $siteName ?>",
             "url": "https://www.linkedin.com/in/carlos-lemes-43a38a120/"
         },
-        "image": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg",
+        "image": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp",
         "publisher": {
             "@type": "Organization",
             "name": "<?= $siteName ?>",
             "logo": {
                 "@type": "ImageObject",
-                "url": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg"
+                "url": "<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp"
             }
         }
     }

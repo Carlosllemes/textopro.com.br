@@ -1,5 +1,5 @@
 <?php
-$tituloPagina = "Preço de conteúdo para mídias sociais: guia completo";
+$tituloPagina = "Preço de conteúdo para mídias sociais";
 $title = "Textopro - Preço de conteúdo para mídias sociais: guia completo";
 $subpage = "Blog";
 $h1 = "Preço de conteúdo para mídias sociais: guia completo";
@@ -22,10 +22,10 @@ include("assets/inc/head.php");
         <section itemscope itemtype="https://schema.org/BlogPosting" class="row">
 
             <h1><?= $h1 ?></h1>
-            <article class="col-9 blog-article">
-                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:70%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
+            <article class="col-12 col-md-9 col-sm-9 col-xl-9 blog-article">
+                <audio controls="" class="m-2" src="<?= $url . "assets/mp3/" . $urlPagina ?>.mp3" style="width:90%;" itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></audio>
                 <p>As mídias sociais são uma parte importante da presença online de qualquer empresa. Elas ajudam a promover sua marca, aumentar o engajamento do público e gerar leads. No entanto, a criação de conteúdo de qualidade para as redes sociais pode ser desafiadora e muitas empresas optam por terceirizar essa tarefa para uma agência de conteúdo especializada, como a Texto Pro. Neste guia completo, abordaremos tudo o que você precisa saber sobre o preço de conteúdo para mídias sociais.</p>
-                <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.jpg">
+                <img itemprop="contentUrl" class="mb-5 w-100" title="<?= $tituloPagina ?>" alt="<?= $tituloPagina ?>" src="<?= $url ?>assets/img/blog/<?= $urlPagina ?>-01.webp">
 
                 <h2>Qual é o preço médio de conteúdo para mídias sociais?</h2>
                 <p>O preço de conteúdo para mídias sociais varia muito, dependendo da agência e do tipo de conteúdo que você precisa. Algumas agências oferecem pacotes mensais que incluem uma quantidade específica de postagens por mês, enquanto outras cobram por postagem individual. Os preços também podem variar dependendo da complexidade do conteúdo. Conteúdo mais simples, como postagens de texto curto, pode custar menos do que conteúdo mais complexo, como vídeos ou infográficos.</p>

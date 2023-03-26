@@ -15,7 +15,7 @@
 
     <IfModule mod_rewrite.c>
       
-        RewriteCond %{http_host} ^www.textopro.com.br [NC]
+        RewriteCond %{http_host} ^https://www.textopro.com.br [NC]
         RewriteRule ^(.*)$ https://www.textopro.com.br/$1 [r=301,NC]
         RewriteRule ^index.php$ https://www.textopro.com.br/ [r=301,NC,L]
 
