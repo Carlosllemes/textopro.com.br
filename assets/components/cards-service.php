@@ -14,7 +14,7 @@ $icons = array(
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
                 <div class="icon"><i class="<?php echo $icon[0]; ?>"></i></div>
-                <h4><a href="<?php echo $url; ?>"><?php echo $icon[1]; ?></a></h4>
+                <h4><?php echo $icon[1]; ?></h4>
                 <p><?php echo $icon[2]; ?></p>
             </div>
         </div>

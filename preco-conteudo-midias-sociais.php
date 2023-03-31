@@ -105,3 +105,42 @@ include("assets/inc/head.php");
 </body>
 
 </html>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Preço de conteúdo para mídias sociais",
+        "image": "<?= $url ?>assets/img/blogpreco-conteudo-midias-sociais-01.webp",
+        "description": "Conteúdo de qualidade para alavancar o resultado de seus clientes.",
+        "sku": "TXP001",
+        "brand": {
+            "@type": "Brand",
+            "name": "TextoPro"
+        },
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "TextoPro"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.4",
+            "reviewCount": "3"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "5",
+            "lowPrice": "20.00",
+            "highPrice": "1199.99",
+            "priceCurrency": "BRL"
+        }
+    }
+</script>

@@ -12,38 +12,48 @@
                             <strong>Email:</strong> <?= $email ?><br>
                         </p>
                         <div class="social-links mt-3">
-                            <a href="#" class="facebook"><i class="bx bxl-whatsapp"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <a title="Whatsapp" href="https://api.whatsapp.com/send?phone=5511951048219&text=%22Ol%C3%A1,%20tudo%20bem?%20Gostaria%20de%20saber%20mais%20sobre%20os%20conte%C3%BAdos%20que%20voc%C3%AAs%20oferecem.%22%0A%0A" class="facebook" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/" title="instagram" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                            <a href="https://www.linkedin.com/feed/" title="linkedin" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Links Úteis</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#sobre">Quem somos</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#solucoes">Serviços</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#faq">FAQ</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>blog">Blog</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>mapa-site">Mapa do site</a></li>
+                        <li><i class="bx bx-chevron-right"></i>
+                            <a href="<? $url ?>index" title="Ir para a seção Home">Home</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i>
+                            <a href="<? $url ?>index#solucoes" title="Ir para a seção Soluções">Serviços</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i>
+                            <a href="<? $url ?>index#pricing-plans" title="Planos">Planos</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i>
+                            <a href="<? $url ?>index#sobre" title="Ir para a seção Sobre Nós">Quem somos</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i>
+                            <a href="<? $url ?>index#faq" title="Ir para a seção FAQ">FAQ</a>
+                        </li>
+
+                        <li><i class="bx bx-chevron-right"></i> <a title="Mapa do site" href="<?= $url ?>mapa-site">Mapa do site</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Outros Serviços</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>">Artigos para blogs e sites</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>">Conteúdo para mídias sociais</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>">Descrições de produtos e serviços</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>">Redação para materiais institucionais</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="<?= $url ?>">Revisão e edição de textos</a></li>
+                        <?php include("assets/inc/blog-menu.php"); ?>
+                        <?php foreach ($linksBlog as $produto) : ?>
+                            <li><i class="bx bx-chevron-right"></i> <a href="<?= $url . $produto['url'] ?>" title="<?= $produto['alt'] ?>"><?= $produto['nome'] ?></a></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 footer-newsletter">
                     <h4>Nossa Newsletter</h4>
                     <p>Não perca nenhuma novidade ou promoção exclusiva da nossa empresa! Cadastre-se agora em nossa newsletter e tenha acesso a informações valiosas diretamente em sua caixa de entrada. Inscreva-se já e fique à frente da concorrência!</p>
                     <form action="contato.php" method="post">
-                        <input type="email" name="email"><input type="submit" value="Se inscreva">
+                        <input placeholder="Email" type="email" name="email"><input type="submit" value="Se inscreva">
                     </form>
                 </div>
             </div>
