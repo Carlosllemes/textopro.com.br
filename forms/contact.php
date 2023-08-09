@@ -1,41 +1,63 @@
 <?php
+ini_set('display_errors', 1);
+require("../assets/vendor/PHPMailer/PHPMailerAutoload.php");
 
-/**
- * Requires the "PHP Email Form" library
- * The "PHP Email Form" library is available only in the pro version of the template
- * The library should be uploaded to: vendor/php-email-form/php-email-form.php
- * For more info and help: https://bootstrapmade.com/php-email-form/
- */
+//Setando as configurações de envio de email, com autenticação do smtp Locaweb
+$mail = new PHPMailer();
+$mail->IsSMTP();
+$mail->From = 'contato@textopro.com.br';
+$mail->FromName = 'TextoPro';
+$mail->Host = 'smtp.titan.email';
+$mail->Port = '465';
+$mail->SMTPAuth = true;
+$mail->Username = 'contato@textopro.com.br';
+$mail->Password = 'Foda03109114@';
+$mail->isHTML();
+$mail->CharSet = 'utf-8';
+$mail->SMTPSecure = 'ssl';
+$mail->AltBody = 'Para ver este e-mail corretamente ative a visualização de HTML';
+$mail->SMTPOptions = array(
+  'ssl' => array(
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true
+  )
+);
 
-// Replace contact@example.com with your real receiving email address
-$receiving_email_address = 'carlos.lemes@doutoresdaweb.com.br';
+$user_name = $_POST['name'];
 
-if (file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php')) {
-  include($php_email_form);
+$user_msg = "
+  <h2 style='text-align:center;font-family: Montserrat, sans-serif; font-size: 25px; color:#000;'>Aperte o cinto! <span style='display:block;'>Sua empresa está prestes a decolar 🚀</span></h2>
+<p style='font-family: Montserrat, sans-serif; font-size: 16px; color:#000;'><b>Olá {$user_name}! 😊</b></p>
+<p style='font-family: Montserrat, sans-serif; font-size: 14px; color:#000;'>Obrigado pelo seu interesse em nossos serviços e por preencher o formulário de solicitação de orçamento. Estamos empolgados em ajudá-lo a impulsionar a presença online do seu negócio e alcançar resultados incríveis!</p>
+<p style='font-family: Montserrat, sans-serif; font-size: 14px; color:#000;'>🚀 Sabemos o quão importante é estar presente nos buscadores e conquistar visibilidade para o seu site. Com nossa expertise em criação de conteúdo especialmente direcionado à conversão para o seu segmento, podemos levar seu negócio para o próximo nível.</p>
+<p style='font-family: Montserrat, sans-serif; font-size: 14px; color:#000;'>Aqui na <b>TextoPro</b>, estamos comprometidos em entregar resultados excepcionais para nossos clientes. Nosso objetivo é criar textos impactantes e envolventes, desenvolvidos especificamente para converter visitantes em clientes fiéis. 💪</p>
+<p style='font-family: Montserrat, sans-serif; font-size: 14px; color:#000;'>Você está a apenas um passo de começar a colher os benefícios de uma estratégia de marketing de conteúdo eficiente. Nosso time de redatores talentosos e experientes está pronto para criar conteúdos personalizados e de alta qualidade para o seu site, com foco em gerar mais tráfego, engajamento e conversões.</p>
+<p style='font-family: Montserrat, sans-serif; font-size: 14px; color:#000;'>Gostaríamos de agendar uma conversa para entender melhor suas necessidades e objetivos. Dessa forma, poderemos fornecer um orçamento personalizado e desenvolver uma estratégia sob medida para o seu negócio. Estamos ansiosos para colaborar com você e alcançar resultados excepcionais juntos!</p>
+<p style='font-family: Montserrat, sans-serif; font-size: 14px; color:#000;'>Entre em contato conosco pelo telefone [número de telefone] ou pelo e-mail [endereço de e-mail]. Estamos disponíveis para responder a todas as suas perguntas e discutir os detalhes do seu projeto.</p>
+<p style='font-family: Montserrat, sans-serif; font-size: 14px; color:#000;'>Agradecemos novamente pelo seu interesse e estamos ansiosos para fazer parte do seu sucesso online! 🌟</p>
+<br>
+<p style='font-family: Montserrat, sans-serif; font-size: 14px; color:#000;'><b>Atenciosamente, <span style='display: block;'>Equipe TextoPro</span></b></p>
+  ";
+
+$mail->setFrom('contato@textopro.com.br', 'Equipe TextoPro');
+$mail->addAddress('contato@textopro.com.br'); // Substitua pelo email do destinatário
+//$mail->addReplyTo($_POST['email'], $_POST['name']); // Substitua pelo email do destinatário
+//$mail->isHTML(true);
+$mail->Subject = 'Formulário do site: '.$_POST['subject'];
+$mail->Body = $_POST['message'];
+
+// $mail->Send(); // ENVIANDO O E-MAIL
+
+if(!$mail->Send()) {
+  echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
-  die('Unable to load the "PHP Email Form" Library!');
+	$mail->addAddress($_POST['email'], $_POST['name']);
+	$mail->Subject = 'Recebemos sua mensagem!';
+	$mail->MsgHTML($user_msg);
+	$mail->Send();
+	header('Location: /index.php?status=success');
+  echo "Message sent!";
 }
 
-$contact = new PHP_Email_Form;
-$contact->ajax = true;
-
-$contact->to = $receiving_email_address;
-$contact->from_name = $_POST['name'];
-$contact->from_email = $_POST['email'];
-$contact->subject = $_POST['subject'];
-
-// Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-/*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-$contact->add_message($_POST['name'], 'From');
-$contact->add_message($_POST['email'], 'Email');
-$contact->add_message($_POST['message'], 'Message', 10);
-
-echo $contact->send();
+?>
