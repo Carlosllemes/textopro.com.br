@@ -1,63 +1,60 @@
 $(window).load(function() {
     let listmap = [];
-    $('#thumbSearch li').each(function() {
+    $('#searchThumb li a').each(function() {
         listmap.push($(this));
     });
 
-    $('#thumbSearch ul').empty();
+    $('#searchThumb').empty();
     $(listmap).each(function() {
-        $('#thumbSearch > ul ').append($(this));
+        $('#searchThumb').append($(this));
         $(this).wrap('<li></li>');
     });
 
-    $('#thumbSearch').addClass('search-active');
-
-    if($('.search-content i').length > 0){
-        $('.search-content i').each(function(){
-            let itemText = $(this).closest('a').attr('title');
-            $(this).closest('a').html(itemText);
-            $(this).remove();
-        });
-    }
-    
-    startSearch();
+    $('#searching').remove();
+    $('#searchThumb').show();
+    searchChart($('#inputSearch'), $('#searchThumb li'));
 });
-
-function startSearch() {
-    return searchChart($('#inputSearch'), $('#thumbSearch li'));
-}
 
 function normalizeChart(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
-function clearChart(str) {
+function cleanChart(str) {
     return str.replace(/\s+/g, ' ').toLowerCase();
 }
 
 function searchChart(search, div) {
 
-    let rows = $(div), val = normalizeChart(clearChart(search.val()));
+    $(document).on('keyup', search, function() {
 
-    rows.show().filter(function() {
+        let rows = $(div), val = normalizeChart(cleanChart(search.val()));
 
-        let text = normalizeChart(clearChart($(this).text()));
+        rows.show().filter(function() {
 
-        let alink = $(this).children();
+            let text = normalizeChart(cleanChart($(this).text()));
 
-        let child = alink.find('#thumbSearch ul li a').attr('href');
+            let alink = $(this).children();
 
-        if (typeof child !== 'undefined') {
-            text += clearChart(child);
-        }
-        
-        return !~text.search(val);
+            let child = alink.find('#searchThumb li a').attr('href');
 
-    }).hide();
-    
+            if (typeof child !== 'undefined') {
+                text += cleanChart(child);
+            }
+            
+            return !~text.search(val);
+
+        }).hide();
+    })
 }
 
 function clearSearch() {
-    $('#thumbSearch ul li').show();
-    $('#inputSearch').val('').focus();
+    ul = document.getElementById('searchThumb');
+    li = ul.getElementsByTagName('li');
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "";
+    }
+    
+    document.getElementById('inputSearch').reset();
+    document.getElementById('countResult').innerHTML = '';
+    document.getElementById('inputSearch').focus();
 }

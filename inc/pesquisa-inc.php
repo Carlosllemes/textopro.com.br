@@ -1,4 +1,3 @@
-<form action="<?=$url?>pesquisa" method="post" class="search search--topo">
-    <input type="text" placeholder="Buscar por ..." name="palavra" >
-    <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
+<form action="<?=$url?>pesquisa" id="header__search">
+    <input type="submit" value=""><i class="fas fa-search"></i>
 </form>

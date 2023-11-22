@@ -1,7 +1,7 @@
 <?php
 
     if (strpos(strtolower($desc), 'lorem') !== false) {
-        $erro .= '$desc --> Altere o valor da variavel $desc / $autoDesc\n';
+        $erro .= '$desc --> Altere o valor da variavel $autoDesc na head.php \n';
     }
 
     if ($nomeSite == 'Doutores da Web') {
@@ -23,6 +23,18 @@
 
     if ($cep == 'CEP: 04552-060') {
         $erro .= '$cep --> Insira o CEP \n';
+    }
+
+    if ($latitude == '-22.546052') {
+        $erro .= '$latitude: --> Insira a latitude \n';
+    }
+
+    if ($longitude == '-48.635514') {
+        $erro .= '$longitude: -->  Insira a longitude \n';
+    }
+
+    if ($idCliente == 'ID_do_cliente_no_mpi_sistema') {
+        $erro .= '$idCliente: -->  Insira o ID do cliente \n' ;
     }
 
     if ($mapa == '[IFRAME_MAPA]') {

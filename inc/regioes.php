@@ -1,5 +1,5 @@
-<h2 class="fs-20">Regiões onde a <?=$nomeSite?> atende <?=$h1?>:</h2><br>
-<div class="mpi-regioes">
+<h2>Regiões onde a <?=$nomeSite?> atende <?=$h1?>:</h2><br>
+<div class="organictabs--regioes">
     <div class="organictabs__menu">
         <span data-tab="regiao-central" class="active-tab">Região Central</span>
         <span data-tab="zona-norte">Zona Norte</span>

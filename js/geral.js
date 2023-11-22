@@ -10,11 +10,12 @@
 
         // SCROLL UP PAGE
         $('footer').after('<span id="scrollUp"/>');
+
     });
 
     // SUB-MENU AUTO SCROLL
     $('header [id*="menu"] ul ul').each(function() {
-        if ($(this).children().length > 15 || $(this).height() > 400) $(this).addClass('sub-menu-scroll');
+        if ($(this).children().length > 15) $(this).addClass('sub-menu-scroll');
     });
 
     $(window).scroll(function() {
@@ -28,7 +29,8 @@
 
     $('#scrollUp').on('click', function() {
         $('html, body').animate({
-           scrollTop: 0
+            scrollTop: 0
         }, '300');
     });
+
 })();

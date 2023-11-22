@@ -68,29 +68,10 @@ if (!file_exists('.htaccess')):
 
         #redirects 
 
-       #redirect 301 /produto {$RAIZ}produtos
-        redirect 301 /parceiros {$RAIZ}informacoes
-        redirect 301 /empresa {$RAIZ}empresa-blindagem
-        redirect 301 /veiculos/audi {$RAIZ}
-        redirect 301 /veiculos/mercedes-benz {$RAIZ}melhores-blindadoras
-        redirect 301 /politica-de-privacidade {$RAIZ}politica-privacidade
-        redirect 301 /veiculos/hyundai/hyundai-ix35-2-0l-flex-aut {$RAIZ}
-        redirect 301 /veiculos/volvo/volvo-xc60-2-0-d5-diesel-momentum-awd-geartronic {$RAIZ}veiculos-eletricos-ou-hibridos-blindados
-        redirect 301 /veiculos/land-rover/land-rover-discovery-4-hse-3-0-4x4-tdv6-sdv6-die-aut {$RAIZ}blindagem-veiculos-eletricos-ou-hibridos
-        redirect 301 /veiculos/chevrolet/chevrolet-s10-cabine-dupla-s10-2-8-ctdi-ltz-4wd-cabine-dupla-aut {$RAIZ}
-        redirect 301 /veiculos {$RAIZ}
-        redirect 301 /veiculos/land-rover/land-rover-range-rover-sport-hse-4x4-5-0-v8-supercharged {$RAIZ}
-        redirect 301 /veiculos/toyota/toyota-hilux-sw4-srx-4x4-2-8-tdi-16v-dies-aut {$RAIZ}
-        redirect 301 /audi-rs-q3-2-5-tfsi-s-tronic-quattro {$RAIZ}
-        redirect 301 /veiculos/audi/audi-rs-q3-2-5-tfsi-s-tronic-quattro {$RAIZ}
-        redirect 301 /modules/handle-key {$RAIZ}
-        redirect 301 /handle-dom {$RAIZ}
-        redirect 301 /a {$RAIZ}
-
-
+        #redirect 301 /produto {$RAIZ}produtos
         
-        #RewriteCond %{REQUEST_URI} ^(.*)colar_link_antigo(.*)$
-        #RewriteRule ^(.*) novo_dominio [L,R=301,QSD]
+#RewriteCond %{REQUEST_URI} ^(.*)colar_link_antigo(.*)$
+#RewriteRule ^(.*) novo_dominio [L,R=301,QSD]
 
         
 

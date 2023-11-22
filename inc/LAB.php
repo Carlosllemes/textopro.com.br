@@ -30,27 +30,12 @@
             }(document, 'script', 'facebook-jssdk'));
 
             // cookies.js
-            // var c = document.createElement("script");c.type = "text/javascript";c.src = "https://cookies.doutoresdaweb.com.br/js/cookies.js";document.head.appendChild(c);
+            var c = document.createElement("script");c.type = "text/javascript";c.src = "https://cookies.doutoresdaweb.com.br/js/cookies.js";document.head.appendChild(c);
 
             // alertando o valor da variável para que não dispare novamente a função
             keyscroll = true;
         }
     });
-</script>
-
-<script>
-  <?php if ($pageLoadingAnimation) : ?>
-    $(window).on('load', function() {
-      setTimeout(removePageLoading, <?= $pageLoadingTimeout ?>);
-    });
-
-    function removePageLoading() {
-      <?php if ($pageLoadingLogo) : ?>
-        $('.page-loading__logo').addClass('page-loading__logo--fade');
-      <?php endif; ?>
-      $('.page-loading').fadeOut('slow');
-    }
-  <?php endif; ?>
 </script>
 
 <script>
@@ -63,5 +48,3 @@
     window.performance.clearMarks();
     window.performance.clearMeasures('measure_load_from_dom');
 </script>
-
-<script async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/af08c61d-7ada-4e09-a2b9-f9cb307025fb-loader.js" ></script>

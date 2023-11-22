@@ -1,13 +1,13 @@
 <? include('inc/coluna-lateral-icm.php'); ?>
 <div class="clear"></div>
 <hr>
-<div class="row mpi-cta">
+<div class="grid article-call">
     <div class="col-8">
-        <h2 class="fs-28 mb-2">Encontrou o que procurava?</h2>
-        <p class="fs-18 text-left">Faça seu orçamento gratis agora mesmo!</p>
+        <h2>Encontrou o que procurava?</h2>
+        <p>Faça seu orçamento gratis agora mesmo!</p>
     </div>
-    <div class="col-4 d-flex align-items-center justify-content-center">
-        <a href="javascript:;" title="Quero meu orçamento" class="btn lightbox" data-src="#modal-form-contato">Quero meu orçamento</a>
+    <div class="col-4">
+        <a href="javascript:;" title="Quero meu orçamento" class="btn btn-white lightbox" data-src="#modal-form-contato">Quero meu orçamento</a>
     </div>
 </div>
 <hr>

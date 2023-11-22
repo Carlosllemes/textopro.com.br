@@ -19,7 +19,7 @@ if (isset($post)):
 
   $message = 'Olá! Me chamo ' . $recebeNome . ', gostaria de mais informações sobre as ofertas da ' . $nomeSite . ' - ' . $slogan .'';
 
-  $href = 'send?phone=55' . $whatsapp .'&amp;text=' . rawurlencode($message) . '.';
+  $href = 'send?phone=55' . $whatsapp .'&text=' . rawurlencode($message) . '.';
 
   // limpa variavel $post
   unset($post['insereLeads']);
@@ -39,7 +39,7 @@ if (isset($post)):
       $json['status'] = 'success';
       $json['insercaoDeLeads'] = $insereLeads;
       $json['html'] = '<p><strong>Agradecemos seu contato! <br> Continue seu atendimento na aba ao lado</strong>'
-      . '<br >em ' . date('d/m/Y'). ' às '. date('h:s') . '</p>'
+      . '<br />em ' . date('d/m/Y'). ' às '. date('h:s') . '</p>'
       . '<p>Em alguns instantes responderemos sua mensagem.</p>';
 
       $json['href'] = $href;

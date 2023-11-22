@@ -1,34 +1,32 @@
-<aside class="mpi-aside aside--auto">
-    <h2>FAÇA UM ORÇAMENTO</h2>    
-    <form enctype="multipart/form-data" method="post" class="mpi-form mpi-form--aside">
-        <label>Digite seu nome</label>
-        <input placeholder="Ex: JOÃO SILVA" type="text" name="nome" onKeyUp="maiusculas(this)" value="<?php if (isset($post['nome'])): echo $post['nome']; endif; ?>" required>
-
-        <label>Digite seu email</label>
-        <input type="text" placeholder="email@exemplo.com.br" onKeyUp="minusculas(this)" name="email" value="<?php if (isset($post['email'])): echo $post['email']; endif; ?>" required>
-        
-        <label>Digite seu telefone</label>
-        <input type="text" placeholder="(11) 1234-5678" name="telefone" value="<?php if (isset($post['telefone'])): echo $post['telefone']; endif; ?>" required>
-        
-        <label>Mensagem</label>
-        <textarea rows="5" name="mensagem" placeholder="Gostaria de saber mais sobre <?=$h1?>" required><?php if (isset($post['mensagem'])): echo $post['mensagem']; endif; ?></textarea>
-        <div class="g-recaptcha" data-size="<?=(!$isMobile) ? 'normal' : 'compact'?>" data-sitekey="<?= $siteKey; ?>"></div>
-        
-        <input type="submit" name="EnviaContato" value="Enviar" class="ir">
-    </form>
-    <hr>
-    <div class="aside-social">
-        <?if(isset($whatsapp)):?>
-        <a href="<?=$wppLink?>" target="_blank" rel="nofollow" class="btn btn--green my-1" title="Orçamento por Whatsapp">Orçamento por Whatsapp</a>
-        <?endif?>
-        <a href="tel:<?=$fone[0][1]?>" class="btn my-1" title="Orçamento pelo Telefone">Orçamento pelo Telefone</a>
-        <? include('inc/social-media.php'); ?>
+<aside>
+    <div class="aside-form">
+        <h2>FAÇA UM ORÇAMENTO</h2>
+        <form enctype="multipart/form-data" method="post">
+            <label>Digite seu email</label>
+            <input type="text" placeholder="email@exemplo.com.br" onKeyUp="minusculas(this)" name="email" value="<?php isset($post['email']) ? $post['email'] : ''?>" required>            
+            <label>Digite seu telefone</label>
+            <input type="text" placeholder="(11) 1234-5678" name="telefone" value="<?php isset($post['telefone']) ? $post['telefone'] : ''?>" required>
+            <label>Mensagem</label>
+            <textarea rows="5" name="mensagem" placeholder="Gostaria de saber mais sobre <?=$h1?>" required><?php isset($post['mensagem']) ? $post['mensagem'] : ''?></textarea>
+            <div class="g-recaptcha" data-size="<?=(!$isMobile) ? 'normal' : 'compact'?>" data-sitekey="<?= $siteKey; ?>"></div>
+            <input type="submit" name="EnviaContato" style="display: none;" class="submit-aside-form">
+            <a href="javascript:;" class="btn btn-aside-submit" title="Solicitar meu Orçamento">Solicitar meu Orçamento</a>
+            <?if(isset($whatsapp)):?>
+            <a href="https://web.whatsapp.com/send?phone=55<?=$whatsapp?>&text=<?=rawurlencode("Olá! Gostaria de mais informações sobre as ofertas da ".$nomeSite." - ".$slogan)?>" target="_blank" rel="nofollow" class="btn btn-aside-whatsapp" title="Orçamento por Whatsapp">Orçamento por Whatsapp</a>
+            <?endif?>
+            <a href="tel:<?=$fone[0][1]?>" class="btn btn-aside-phone" title="Compre pelo Telefone">Compre pelo Telefone</a>
+        </form>
+        <div class="aside-social">
+            <?if(isset($whatsapp)):?>
+            <a href="https://web.whatsapp.com/send?phone=55<?=$whatsapp?>&text=<?=rawurlencode("Olá! Gostaria de mais informações sobre as ofertas da ".$nomeSite." - ".$slogan)?>" title="Whatsapp" target="_blank" rel="nofollow" class="call-whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <?endif?>
+            <a href="tel:<?=$fone[0][1]?>" class="call-phone" title="Compre pelo Telefone"><i class="fas fa-phone"></i></a>
+        </div>
     </div>
-    <hr>
-    <h2 class="collapse-aside">Páginas Relacionadas <i class="fas fa-caret-down"></i></h2>
+    <h2 class="collapse-aside">Páginas Relacionadas</h2>
     <nav style="display: none;">
         <ul>
-            <!-- LINKS DO MENU INSERIDOS VIA SCRIPT -->
+            <? include('inc/sub-menu.php');?>
         </ul>
     </nav>
 </aside>
@@ -52,7 +50,6 @@
                 $('.tabs-btn [data-tab]').removeClass('active-tab');
                 $(this).addClass('active-tab');
             }
-
             if($('.tabs-content .active-tab').attr('data-tab') != currentTab){
                 $('.tabs-content .active-tab').fadeOut(function(){
                     $(this).removeClass('active-tab');
@@ -64,7 +61,98 @@
 
         $('aside .collapse-aside').on('click', function(){
             $(this).next().slideToggle();
-            $(this).find("i").toggleClass('collapse-aside-active');
         });
+
+        $('aside .btn-aside-submit').on('click', function(){
+            $('aside .submit-aside-form').trigger('click');
+        });
+
+        if($(window).width() <= 765){
+            $('aside .aside-form .aside-social .call-whatsapp').attr('href', 'https://api' + $('aside .aside-social .call-whatsapp').attr('href').split('https://web')[1]);
+            $('aside .aside-form .btn-aside-whatsapp').attr('href', 'https://api' + $('aside .aside-form .btn-aside-whatsapp').attr('href').split('https://web')[1]);
+            $('.topo-contato .btn-whatsapp').attr('href', 'https://api' + $('.topo-contato .btn-whatsapp').attr('href').split('https://web')[1]);
+        }
+
     });
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "ImageObject",
+    "contentUrl": "<?= $url ?>imagens/informacoes/<?= $urlPagina ?>-01.jpg",
+    "license": "",
+    "acquireLicensePage": "",
+    "creditText": "Image <?= $nomeSite ?>",
+    "creator": {
+      "@type": "Person",
+      "name": "<?= $nomeSite ?>"
+    },
+    "copyrightNotice": "<?= $nomeSite ?>"
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Organization",
+    "url": "<?= $url ?>",
+    "logo": "<?= $url ?>imagens/logo.png"
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "LocalBusiness",
+    "image": [
+      "<?= $url ?>imagens/logo.png"
+    ],
+    "name": "<?= $nomeSite ?>",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "<?= $rua ?>",
+      "addressLocality": "<?= $cidade ?>",
+      "addressRegion": "<?= $UF ?>",
+      "postalCode": "<?= $cep ?>",
+      "addressCountry": "BR"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "<?= $nomeSite ?>"
+    },
+
+    "telephone": "<?= $fone[0][0] . ' ' . $fone[0][1] ?>",
+    "servesCuisine": "Brasil"
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "<?= $url ?>article"
+    },
+    "headline": "<?= $h1 ?>",
+    "image": [
+      "<?= $url ?>imagens/informacoes/<?= $urlPagina ?>-01.jpg"
+    ],
+
+    "author": {
+      "@type": "Person",
+      "name": "<?= $nomeSite ?>"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "<?= $nomeSite ?>",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "<?= $url ?>imagens/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "<?= $desc ?>"
+  }
 </script>

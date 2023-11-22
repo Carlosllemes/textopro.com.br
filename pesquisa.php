@@ -5,7 +5,9 @@ $desc       = 'Pesquisa no Site - Navegue pelo menu do nosso site e encontre o q
 $key        = 'Pesquisa no Site, encontre o que está procurando';
 $var        = 'Pesquisa no Site';
 include('inc/head.php');
-?>
+include('inc/fancy.php'); ?>
+<link defer rel="stylesheet" href="<?=$url?>/js/sweetalert/css/sweetalert.css">
+<script defer src="<?=$url?>/js/sweetalert/js/sweetalert.min.js"></script>
 </head>
 <body>
     <? include('inc/topo.php');?>
@@ -15,23 +17,20 @@ include('inc/head.php');
                 <?=$caminho?>
                 <div class="container">
                     <div class="wrapper">
-                        <div class="search my-5">
-                            <input type="text" placeholder="Buscar por ..." id="inputSearch" onkeypress="if(event.key === 'Enter'){startSearch();}" value="<?=$_POST['palavra']?>">
-                            <div class="button-group">
-                                <button type="submit" onclick="startSearch();"><i class="fas fa-search"></i></button>
-                                <button type="reset" onclick="clearSearch();"><i class="fas fa-redo"></i></button>
-                            </div>
+                        <div id="search">
+                            <input type="text" id="inputSearch" placeholder="Buscar...">
+                            <button type="reset" onclick="clearSearch();"><i class="fas fa-redo"></i></button>
                         </div>
                     </div>
                     <div class="clear"></div>
                 </div>
                 <div class="container">
                     <div class="wrapper">
-                        <div class="search-content" id="thumbSearch">
-                            <ul>
-                                <? include('inc/menu-top.php');?>
-                            </ul>
-                        </div>
+                        <div id="countResult"></div>
+                        <h2 id="searching">Buscando...</h2>
+                        <ul id="searchThumb" style="display: none">
+                            <? include('inc/menu-top.php');?>
+                        </ul>
                     </div>
                     <div class="clear"></div>
                 </div>

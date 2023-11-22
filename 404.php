@@ -12,10 +12,10 @@ include('inc/head.php');
     <main>
         <div class="content">
             <section class="page-404">
-                <?= $autoBreadcrumb ?>
+                <?=$caminho?>
                 <div class="container">
                     <div class="wrapper">
-                        <h2 class="title-404 fs-100">404</h2>
+                        <h2 class="title-404">404</h2>
                         <p class="msg-404"><strong class="dark">Ops! Página não encontrada.</strong><br>
                             Navegue pelo site da <?=$nomeSite?> e encontre o que está procurando, <br class="hide-mobile"> escolha abaixo a página que deseja visualizar.
                         </p>

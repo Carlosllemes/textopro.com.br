@@ -1,15 +1,15 @@
-<h2 class="fs-20">Principais cidades e regiões do Brasil onde a <?=$nomeSite?> atende <?=$h1?>:</h2>
-<div class="mpi-regioes mpi-regioes--brasil">
+<h2>Principais cidades e regiões do Brasil onde a <?=$nomeSite?> atende <?=$h1?>:</h2>
+<div class="organictabs--regioes brasil">
       <div class="organictabs__menu">
-            <span data-tab="rj" class="active-tab">RJ</span>
+            <!-- <span data-tab="rj">RJ</span>
             <span data-tab="mg">MG</span>
             <span data-tab="es">ES</span>
             <span data-tab="sp">SP</span>
             <span data-tab="pr">PR</span>
             <span data-tab="sc">SC</span>
-            <span data-tab="rs">RS</span>
-            <span data-tab="pe">PE</span>
-            <span data-tab="ba">BA</span>
+            <span data-tab="rs">RS</span> -->
+            <span data-tab="pe" class="active-tab">PE</span>
+            <!-- <span data-tab="ba">BA</span>
             <span data-tab="ce">CE</span>
             <span data-tab="go">GO e DF</span>
             <span data-tab="am">AM</span>
@@ -26,10 +26,10 @@
             <span data-tab="ro">RO</span>
             <span data-tab="rr">RR</span>
             <span data-tab="se">SE</span>
-            <span data-tab="to">TO</span>
+            <span data-tab="to">TO</span> -->
       </div>
       <div class="organictabs__content">
-            <ul data-tab="rj">
+            <!-- <ul data-tab="rj">
                   <li><strong>Rio de Janeiro </strong></li>
                   <li><strong>São Gonçalo</strong></li>
                   <li><strong>Duque de Caxias</strong></li>
@@ -252,40 +252,29 @@
                   <li><strong>Ijuí</strong></li>
                   <li><strong>Alegrete</strong></li>
             </ul>
-            
+             -->
             
             <ul data-tab="pe">
                   <li><strong>Recife</strong></li>
-                  <li><strong>Jaboatão dos Guararapes</strong></li>
-                  <li><strong>Olinda</strong></li>
-                  <li><strong>Caruaru</strong></li>
-                  <li><strong>Petrolina</strong></li>
-                  <li><strong>Paulista</strong></li>
-                  <li><strong>Cabo de Santo Agostinho</strong></li>
-                  <li><strong>Camaragibe</strong></li>
-                  <li><strong>Garanhuns</strong></li>
-                  <li><strong>Vitória de Santo Antão</strong></li>
-                  <li><strong>Igarassu</strong></li>
-                  <li><strong>São Lourenço da Mata</strong></li>
-                  <li><strong>Abreu e Lima</strong></li>
-                  <li><strong>Santa Cruz do Capibaribe</strong></li>
-                  <li><strong>Ipojuca</strong></li>
-                  <li><strong>Serra Talhada</strong></li>
-                  <li><strong>Araripina</strong></li>
-                  <li><strong>Gravatá</strong></li>
-                  <li><strong>Carpina</strong></li>
-                  <li><strong>Goiana</strong></li>
-                  <li><strong>Belo Jardim</strong></li>
-                  <li><strong>Arcoverde</strong></li>
-                  <li><strong>Ouricuri</strong></li>
-                  <li><strong>Escada</strong></li>
-                  <li><strong>Pesqueira</strong></li>
-                  <li><strong>Surubim</strong></li>
-                  <li><strong>Palmares</strong></li>
-                  <li><strong>Bezerros</strong></li>
+                       
+                  
+                       <li><strong>Araçoiaba,</strong></li>
+                       <li><strong>Igarassu,</strong></li>
+                       <li><strong>Itapissuma,</strong></li>
+                       <li><strong>Ilha de Itamaracá,</strong></li>
+                       <li><strong>Abreu e Lima,</strong></li>
+                       <li><strong>Paulista,</strong></li>
+                       <li><strong>Olinda,</strong></li>
+                       <li><strong>Camaragibe,</strong></li>
+                       <li><strong>Recife,</strong></li>
+                       <li><strong>Jaboatão dos Guararapes,</strong></li>
+                       <li><strong>São Lourenço da Mata,</strong></li>
+                       <li><strong>Moreno,</strong></li>
+                       <li><strong>Cabo de Santo Agostinho e Ipojuca.</strong></li>
+              
             </ul>
             
-            <ul data-tab="ba">
+            <!-- <ul data-tab="ba">
                   <li><strong>Salvador</strong></li>
                   <li><strong>Feira de Santana</strong></li>
                   <li><strong>Vitória da Conquista</strong></li>
@@ -659,6 +648,6 @@
                   <li><strong>São Miguel do Tocantins</strong></li>
                   <li><strong>Nova Olinda</strong></li>
                   <li><strong>Nossa Senhora das Dores</strong></li>
-            </ul>
+            </ul> -->
       </div>
 </div>

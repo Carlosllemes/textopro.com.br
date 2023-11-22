@@ -12,7 +12,7 @@ include('inc/head.php');
     <main>
         <div class="content">
             <section>
-                <?= $autoBreadcrumb ?>
+                <?=$caminho?>
                 <div class="container">
                     <div class="wrapper">
                         <h2>Navegue pelo site da <?=$nomeSite?></h2>
@@ -30,8 +30,6 @@ include('inc/head.php');
         $(document).ready(function(){
             if($('.sitemap i').length > 0){
                 $('.sitemap i').each(function(){
-                    let itemText = $(this).closest('a').attr('title');
-                    $(this).closest('a').html(itemText);
                     $(this).remove();
                 });
             }

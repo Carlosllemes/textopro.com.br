@@ -10,29 +10,26 @@ include('inc/head.php');
 <body>
   <? include('inc/topo.php');?>
   <main>
-    <div class="content">
-      <section>  
-        <?= $autoBreadcrumb ?>
-        <div class="container">    
+    <div class="content" itemscope itemtype="https://schema.org/Products">
+      <section>
+        <?=$caminho?>
+        <div class="container">
           <div class="wrapper">
             <h2>Conheça todas as Informações da <?=$nomeSite?>:</h2>
-            <div class="card-group">
+            <div class="grid grid-col-4">
               <?php
-              foreach($vetKey as $key => $vetor):
-                $mpiUrl   = $vetor['url'];
-                $mpiTitle = $vetor['key'];   
-                $mpiDesc  = $vetor['desc'];
-                $mpiCover = glob('imagens/informacoes/'.$mpiUrl.'-{,[0-9]}[0-9].jpg', GLOB_BRACE); // Default Cover
-                $mpiAltCover = 'imagens/informacoes/'.$mpiUrl.'-'.$vetor['cover'].'.jpg';  // Alternative cover
-                ?>
-                <div class="card card--mpi">
-                  <a class="card__link" rel="nofollow" href="<?=$url.$mpiUrl?>" title="<?=$mpiTitle?>">
-                    <img class="card__image" src="<?=$url.(($vetor['cover'] && $vetor['cover'] != ' ') ? $mpiAltCover : $mpiCover[0])?>" alt="<?=$mpiTitle?>" title="<?=$mpiTitle?>" >
-                    <h3 class="card__title"><?=$mpiTitle?></h3>
-                  </a>
-                </div>
-                <?php 
-              endforeach; ?>
+              foreach ($vetKey as $key => $vetor) {
+                $strInfo = "
+                <div class=\"card card--mpi\">";
+                $strInfo .= "
+                <a class=\"card__link\" rel=\"nofollow\" href=\"".$url.$vetor['url']."\" title=\"".$vetor['key']."\">
+                <img class=\"card__image\" src=\"".$url."inc/scripts/thumbs.php?w=235&amp;h=240&amp;imagem=".$url."imagens/informacoes/".$vetor['url']."-01.jpg\" alt=\"".$vetor['key']."\" title=\"".$vetor['key']."\"/>
+                <h2 class=\"card__title\" itemprop=\"name\">".$vetor['key']."</h2>
+                </a>";
+                $strInfo .= "
+                </div>";
+                echo $strInfo;
+              }?>
             </div>
             <? include('inc/social-media.php');?>
           </div> <!-- end wrapper -->

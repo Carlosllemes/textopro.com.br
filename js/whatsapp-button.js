@@ -54,6 +54,7 @@ wbContainer = $('.whatsbutton-container');
 		})
 
 		const CheckBrowserIsMobile = (href) => {
+
 			if ($(window).width() > 767) {
 				href = "https://web.whatsapp.com/" + href;
 				window.open(href);
@@ -61,6 +62,7 @@ wbContainer = $('.whatsbutton-container');
 				href = "https://api.whatsapp.com/" + href;
 				window.location.replace(href);
 			}
+
 		}
 
 		const WhatsButtonPopup = (action) => {
@@ -171,7 +173,7 @@ wbContainer = $('.whatsbutton-container');
 			return $.ajax({
 				async: false,
 				type: 'POST',
-				url: '<?=$url?>whatsapp-button-send.php',
+				url: './whatsapp-button-send.php',
 				data: data,
 				error: () => {
 					alert('Oops! Não foi possível concluir a requisição, tem novamente mais tarde.')
@@ -184,7 +186,7 @@ wbContainer = $('.whatsbutton-container');
 			checkIsEmpty(); // verifica se os campos estão vazios
 
 			// valida campos específicos antes de enviar
-			if (!msgAlert) {
+			if (msgAlert) {
 				if (!validateStr($post.nome.value)) {
 					msgAlert = 'Informe um nome válido.';
 				}

@@ -6,4 +6,4 @@ Disallow: /imagens/servicos/thumb/
 
 
 
-Sitemap: https://www.autobunkers.com.br/sitemap.xml
+Sitemap: https://www.sonorasolucoesauditivas.com.br/sitemap.xml

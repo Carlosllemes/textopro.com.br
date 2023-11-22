@@ -1,7 +1,14 @@
-<?php
-include_once('inc/vetKey.php');
-foreach ($vetKey as $key => $vetor): ?>
-  <li>
-    <a data-mpi href="<?=$url.$vetor['url']?>" title="<?=$vetor['key']?>"><?=$vetor['key']?></a>
-  </li>
-<? endforeach; ?>
+
+  <?php
+  include_once('inc/vetKey.php');
+  foreach ($vetKey as $key => $vetor) {
+    $strInfo = "
+    <li>";
+      $strInfo .= "
+      <a href=\"".$url.$vetor['url']."\" title=\"".$vetor['key']."\">".$vetor['key']."</a>";
+      $strInfo .= "
+    </li>";
+    echo $strInfo;
+  }
+  ?>
+  

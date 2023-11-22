@@ -37,7 +37,7 @@ $data = '<div id="descricao-produto">  <!-- #descricao-produto INICIO ORGANIC TA
       <li>
         <a href=\"".$url.$pasta.$img."-$zero".$i.".jpg\" data-fancybox-group=\"group1\" class=\"lightbox\" title=\"".$h1."\">
           
-          <img src=\"".$url.$pasta.$img."-$zero".$i.".jpg\" alt=\"".$h1."\" title=\"".$h1."\">
+          <img src=\"".$url."inc/scripts/thumbs.php?w=200&amp;h=200&amp;zc=1&amp;imagem=".$url.$pasta.$img."-$zero".$i.".jpg\" alt=\"".$h1."\" title=\"".$h1."\"/>
         </a>";
         
         if (isset($names[$i])) {
