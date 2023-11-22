@@ -1,0 +1,6 @@
+cache/
+doutor/cache/*
+inc/scripts/cache/*
+cacamba/
+cacamba/*
+.htaccess

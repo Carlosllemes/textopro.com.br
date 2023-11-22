@@ -1,58 +1,90 @@
-<?php
-$title = "Textopro - O melhor serviço de criação de conteúdo";
-$desc = "Com a Textopro, você tem acesso ao melhor serviço de criação de conteúdo! Aumente sua visibilidade online e atraia mais clientes com textos persuasivos e de alta qualidade. Experimente agora!";
-include("assets/inc/head.php") ?>
+<?
+$h1         = 'Home';
+$title      = 'Home';
+$desc       = 'Home - A OCS Remoção de Entulho foi fundada em 1998 na cidade de São Paulo por Orlando Correia da Silva, sendo nossa principal missão ajudar o meio';
+$key        = 'uuuuuuuuuu, jjjjjjjjjjjj, lllllllllll';
+$var        = 'Home';
+include('inc/head.php');
+?>
 </head>
-
 <body>
-  <!-- ======= Header ======= -->
-  <?php include("assets/inc/header.php") ?>
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center justify-content-center">
-    <?php include("assets/components/menu-banner.php") ?>
-  </section>
-  <!-- End Hero -->
-  <main id="main">
+<? include('inc/topo.php'); ?>
 
-    <!-- ======= Services Section ======= -->
-    <section id="solucoes" class="services">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Serviços</h2>
-          <p>Conheça nossos serviços</p>
-        </div>
-        <?php include("assets/components/cards-service.php") ?>
-      </div>
-    </section>
-    <!-- ======= Features Section ======= -->
-    <!-- End Services Section -->
-    <? include("assets/components/plans.php") ?>
-    <!-- ======= Sobre Section ======= -->
-    <?php include("assets/components/about-us.php") ?>
-    <!-- End Sobre Section -->
-    <? include("assets/components/faq.php") ?>
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-        <div class="text-center">
-          <h3>Conecte-se com seus clientes através das palavras certas!</h3>
-          <p>A TextoPro oferece serviços de criação de conteúdo, como blogs, roteiros, revisão de textos, descrições de produtos e muito mais. Com nossas soluções de conteúdo personalizadas, ajudamos sua empresa a se destacar da concorrência e alcançar seus objetivos de marketing. Não perca a oportunidade de se conectar com seus clientes de uma forma mais significativa e eficaz. Entre em contato com a TextoPro hoje mesmo e veja como podemos ajudar sua empresa a crescer com conteúdo de qualidade!</p>
-          <a class="cta-btn" href="#">Entre em contato agora</a>
-        </div>
-      </div>
-    </section>
-    <!-- End Cta Section -->
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <? include('assets/components/contact.php') ?>
-    </section>
-    <!-- End Contact Section -->
-  </main>
-  <!-- End #main -->
-  <!-- ======= Footer ======= -->
-  <? include('assets/components/footer.php') ?>
-  <!-- End Footer -->
-
+<div class="banner">
+	<a href="<?=$url?>empresa" title="empresa" ><video src="<?=$url?>imagens/empresa.mp4" autoplay loop muted></video></a>
+</div>
+<main> 
+	<div class="content">
+		<section>
+			<div class="wrapper">
+				<h1><?=$nomeSite." - ".$slogan?></h1>
+				<ul class="thumbnails">
+					<li>
+						<a href="<?=$url?>empresa" title="A empresa">
+							<img src="<?=$url?>imagens/empresa.jpg" title="A empresa" alt="A empresa">
+							<h2>A empresa</h2>
+						</a>
+					</li>
+					<li>
+						<a href="<?=$url?>duvidas" title="Dúvidas">
+							<img src="<?=$url?>imagens/duvidas.jpg" title="Dúvidas" alt="Dúvidas">
+							<h2>Dúvidas</h2>
+						</a>
+					</li>
+				<li>
+						<a href="<?=$url?>galeria-fotos" title="Galerias">
+							<img src="<?=$url?>imagens/galeria.jpg" title="Galerias" alt="Galerias">
+							<h2>Galerias</h2>
+						</a>
+					</li>
+				</ul>
+				
+			</div>
+			<div class="conteudo-index">
+				<div class="wrapper">
+					<h2 class="text-center">Construíndo um futuro junto a você de um planeta mais limpo.</h2>
+					
+				</div>
+			</div>
+			<div class="wrapper">
+				<h2>Produtos em Destaque</h2>
+				
+				<ul class="thumbnails-mod1 d-flex justify-content-center flex-wrap">
+					<li>
+						<a rel="nofollow" href="<?=$url;?>cacamba-4m3" title="Caçamba 4m3"><img src="<?=$url;?>imagens/informacoes/cacamba-4m3-01.jpg" alt="Caçamba 4m3" title="Caçamba 4m3"/></a>
+						<h2><a href="<?=$url;?>cacamba-4m3" title="Caçamba 4m3">Caçamba 4m3</a></h2>
+					</li>
+					<li>
+						<a rel="nofollow" href="<?=$url;?>empresa-cacamba" title="Empresa de caçamba"><img src="<?=$url;?>imagens/informacoes/empresa-cacamba-01.jpg" alt="Empresa de caçamba" title="Empresa de caçamba"/></a>
+						<h2><a href="<?=$url;?>empresa-cacamba" title="Empresa de caçamba">Empresa de caçamba</a></h2>
+					</li>
+					<li>
+						<a rel="nofollow" href="<?=$url;?>locadora-cacamba" title="Locadora de caçamba"><img src="<?=$url;?>imagens/informacoes/locadora-cacamba-01.jpg" alt="Locadora de caçamba" title="Locadora de caçamba"/></a>
+						<h2><a href="<?=$url;?>locadora-cacamba" title="Locadora de caçamba">Locadora de caçamba</a></h2>
+					</li>
+					<li>
+						<a rel="nofollow" href="<?=$url;?>servico-cacamba-sp" title="Serviço de caçamba sp"><img src="<?=$url;?>imagens/informacoes/servico-cacamba-sp-01.jpg" alt="Serviço de caçamba sp" title="Serviço de caçamba sp"/></a>
+						<h2><a href="<?=$url;?>servico-cacamba-sp" title="Serviço de caçamba sp">Serviço de caçamba sp</a></h2>
+					</li>
+				</ul>
+				
+				<br class="clear">
+			</div>
+		</section>
+	</div>
+</main>
+<? include('inc/footer.php'); ?>
+<link rel="stylesheet" href="<?=$url?>nivo/nivo-slider.css" type="text/css" media="screen">
+<script  src="<?=$url?>nivo/jquery.nivo.slider.js"></script>
+<script>
+$(window).load(function() {
+$('#slider').nivoSlider({
+	effect: 'fade',
+	pauseTime: 3000,
+	directionNav: true,
+	controlNav: false
+});
+});
+</script>
 </body>
-
 </html>

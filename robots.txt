@@ -1,6 +1,9 @@
 User-agent: *
 
-Disallow: /assets/
+Disallow: /inc/
+
+Disallow: /imagens/servicos/thumb/
 
 
-Sitemap: https://www.textopro.com.br/sitemap.xml
+
+Sitemap: https://www.ocscacambas.com.br/sitemap.xml
