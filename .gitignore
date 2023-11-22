@@ -1,0 +1,4 @@
+cache/
+doutor/cache/*
+inc/scripts/cache/*
+.htaccess

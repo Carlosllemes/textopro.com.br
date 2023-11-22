@@ -1,41 +1,37 @@
-<?php
-$tituloPagina = "404";
-$title = "Textopro - Ops!! Página não encontrada ";
-$subpage = "Blog";
-$h1 = "Página não encontrada 404";
-$subpageLink = "blog";
-$desc = "Página não encontrada";
-include("assets/inc/head.php");
+<?
+$h1         = 'Erro 404: Página não encontrada';
+$title      = 'Erro 404: Página não encontrada';
+$desc       = 'Erro 404: Página não encontrada - Navegue pelo menu do nosso site e encontre o que está procurando, escolha abaixo a página que deseja visualizar.';
+$key        = '';
+$var        = 'Página não encontrada';
+include('inc/head.php');
 ?>
-
 </head>
-
 <body>
-    <!-- ======= Header ======= -->
-    <?php include("assets/inc/header.php") ?>
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center justify-content-center bread">
-        <?php include("assets/components/breadcumbn1.php") ?>
-    </section>
-    <!-- End Hero -->
-    <div class="container post-blog">
-        <section class="row">
-
-            <h1 itemprop="headline"><?= $h1 ?></h1>
-            <article class="col-12 blog-article">
-                <p>Desculpe, a página que você procura não pode ser encontrada. Parece que você chegou a uma página que não existe ou foi removida. Por favor, verifique se o endereço está correto ou retorne à página inicial para tentar encontrar o que você procura. Obrigado pela compreensão!</p>
-                <a href="<?= $url ?>" class="btn btn-primary    ">Voltar para home</a>
-            </article>
-        </section>
-
-        <br class="clear">
-    </div>
-    <!-- End #main -->
-    <!-- ======= Footer ======= -->
-
-    <? include('assets/components/footer.php') ?>
-    <!-- End Footer -->
-
+    <? include('inc/topo.php');?>
+    <main>
+        <div class="content">
+            <section class="page-404">
+                <?= $autoBreadcrumb ?>
+                <div class="container">
+                    <div class="wrapper">
+                        <h2 class="title-404 fs-100">404</h2>
+                        <p class="msg-404"><strong class="dark">Ops! Página não encontrada.</strong><br>
+                            Navegue pelo site da <?=$nomeSite?> e encontre o que está procurando, <br class="hide-mobile"> escolha abaixo a página que deseja visualizar.
+                        </p>
+                        <div class="menu-404">
+                            <h2 class="dark">O que deseja fazer?</h2>
+                            <div class="my-5">
+                                <a rel="nofollow" title="Voltar a página inicial" href="<?=$url;?>" >Voltar a página inicial</a>
+                                <a rel="nofollow" title="Ver O Mapa do site" href="<?=$url;?>mapa-site" >Ver O Mapa do site</a>
+                            </div>
+                        </div>
+                    </div> <!-- wrapper -->
+                    <div class="clear"></div>
+                </div> <!-- container -->
+            </section>
+        </div> <!-- content -->
+    </main>
+    <? include('inc/footer.php');?>
 </body>
-
 </html>

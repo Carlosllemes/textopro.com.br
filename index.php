@@ -1,58 +1,152 @@
-<?php
-$title = "Textopro - O melhor serviço de criação de conteúdo";
-$desc = "Com a Textopro, você tem acesso ao melhor serviço de criação de conteúdo! Aumente sua visibilidade online e atraia mais clientes com textos persuasivos e de alta qualidade. Experimente agora!";
-include("assets/inc/head.php") ?>
+<?
+$h1         = 'Home';
+$title      = 'Home';
+$desc       = 'Home - ';
+$key        = 'uuuuuuuuuu, jjjjjjjjjjjj, lllllllllll';
+$var        = 'Home';
+include('inc/head.php');
+?>
+<!--STARTSCRIPTSHEADER-->
+<!--ENDSCRIPTSHEADER-->
 </head>
-
 <body>
-  <!-- ======= Header ======= -->
-  <?php include("assets/inc/header.php") ?>
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center justify-content-center">
-    <?php include("assets/components/menu-banner.php") ?>
-  </section>
-  <!-- End Hero -->
-  <main id="main">
+	<? include('inc/topo.php'); ?>
+	<main>
+		<div class="content">
+			<section>
+				<!--STARTCOMPONENTS-->
+				<div class="d-flex flex-column-reverse">
+					<div class="container">
+						<div class="wrapper">
+							<div class="sobre-home">
+								<div class="grid-col-2 grid-gap-50 align-items-start">
+									<div class="sobre-home__content">
+										<h1 class="sobre-home__title">Segurança e conforto com os veículos <span>blindados da <?=$nomeSite?>!</span></h1>
+										<p class="sobre-home__text">Veículos blindados 0KM ou Seminovos com garantia estendida!</p>									
+									</div>
 
-    <!-- ======= Services Section ======= -->
-    <section id="solucoes" class="services">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Serviços</h2>
-          <p>Conheça nossos serviços</p>
-        </div>
-        <?php include("assets/components/cards-service.php") ?>
-      </div>
-    </section>
-    <!-- ======= Features Section ======= -->
-    <!-- End Services Section -->
-    <? include("assets/components/plans.php") ?>
-    <!-- ======= Sobre Section ======= -->
-    <?php include("assets/components/about-us.php") ?>
-    <!-- End Sobre Section -->
-    <? include("assets/components/faq.php") ?>
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-        <div class="text-center">
-          <h3>Conecte-se com seus clientes através das palavras certas!</h3>
-          <p>A TextoPro oferece serviços de criação de conteúdo, como blogs, roteiros, revisão de textos, descrições de produtos e muito mais. Com nossas soluções de conteúdo personalizadas, ajudamos sua empresa a se destacar da concorrência e alcançar seus objetivos de marketing. Não perca a oportunidade de se conectar com seus clientes de uma forma mais significativa e eficaz. Entre em contato com a TextoPro hoje mesmo e veja como podemos ajudar sua empresa a crescer com conteúdo de qualidade!</p>
-          <a class="cta-btn" href="#">Entre em contato agora</a>
-        </div>
-      </div>
-    </section>
-    <!-- End Cta Section -->
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <? include('assets/components/contact.php') ?>
-    </section>
-    <!-- End Contact Section -->
-  </main>
-  <!-- End #main -->
-  <!-- ======= Footer ======= -->
-  <? include('assets/components/footer.php') ?>
-  <!-- End Footer -->
+									<div class="sobre-home__cover">
+										<img class="sobre-home__image" src="<?=$url?>imagens/blindagem-defense.webp" alt="Blindagem Defense" title="Blindagem Defense" width="565" height="426">
+									</div>
+								</div>							
+							</div>						
+						</div>
+						<div class="clear"></div>
+					</div>
+          
+					<div class="bg-dark">   
+						<div class="container py-0">
+							<div class="wrapper">
+								<div class="banner-home">
+									<div class="grid-col-2 grid-gap-40">
+										<a class="banner-home__item" href="https://blindados.autobunkers.com.br/" target="_blank" rel="nofollow" title="Veículos">
+											<img class="banner-home__image" src="<?=$url?>imagens/veiculos.jpg" alt="Veículos" title="Veículos" width="570" height="628">
+										</a>
 
+										<a class="banner-home__item" href="<?=$url?>blindagem" title="Blindagem">
+											<img class="banner-home__image" src="<?=$url?>imagens/blindagem.jpg" alt="Blindagem" title="Blindagem" width="570" height="628">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>					
+
+				<div class="bg-black">
+					<div class="container">						
+						<div class="features">
+							<div class="wrapper">
+								<div class="features__heading">
+									<h2 class="features__title">Por que escolher a <?=$nomeSite?>?</h2>
+									<p class="features__text">Mais de 20 mil veículos blindados comercializados!</p>
+								</div>
+							</div>							
+
+							<div class="features__item">
+								<div class="features__cover">
+									<img class="features__image" src="<?=$url?>imagens/features/seguranca-compra.webp" alt="Segurança de compra" title="Segurança de compra" loading="lazy" width="280" height="172">
+								</div>
+
+								<div class="features__content">
+									<h3 class="features__item-title">Segurança de compra</h3>
+									<ul class="features__list">
+										<li><span>Mecânica e Check-up de 160 itens;</span></li>
+										<li><span>Revisão de blindagem em oficina especializada;</span></li>
+										<li><span>Documentação e análise de procedência;</span></li>
+										<li><span>Operações financeiras transparentes.</span></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="features__item">
+								<div class="features__cover">
+									<img class="features__image" src="<?=$url?>imagens/features/comodidade.webp" alt="Comodidade" title="Comodidade" loading="lazy" width="280" height="280">
+								</div>
+
+								<div class="features__content">
+									<h3 class="features__item-title">Comodidade</h3>
+									<ul class="features__list">
+										<li><span>Entrega em domicílio;</span></li>
+										<li><span>Documentação de blindagem;</span></li>
+										<li><span>Transferência do veículo;</span></li>
+										<li><span>Agendamento de revisões;</span></li>
+										<li><span>Acessórios e boutique veicular.</span></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="features__item">
+								<div class="features__cover">
+									<img class="features__image" src="<?=$url?>imagens/features/consultores-especializados.webp" alt="Consultores Especializados" title="Consultores Especializados" loading="lazy" width="280" height="287">
+								</div>
+
+								<div class="features__content">
+									<h3 class="features__item-title">Consultores Especializados</h3>
+									<ul class="features__list">
+										<li><span>Solução sob medida para sua compra;</span></li>
+										<li><span>Conhecimento em segurança urbana;</span></li>
+										<li><span>Experiência em elétricos e híbridos.</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>	
+
+				<div class="banner">
+                    <img class="banner__image" src="<?=$url?>imagens/banners/banner-expertise.webp" alt="Expertise em Elétricos e Híbridos" title="Expertise em Elétricos e Híbridos" width="1920" height="757" loading="lazy">
+                </div>
+
+				<div class="video-home">
+					<div class="container">						
+						<div class="video-home__content">
+							<h2 class="video-home__title">Assista o vídeo abaixo e conheça um pouco mais sobre a <?=$nomeSite?></h2>
+							<div class="video-home__video" data-video="https://www.youtube.com/watch?v=7Y_xmz_lqsg" data-video-cover="<?=$url?>imagens/video-cover.webp" data-play-on-load></div>
+						</div>						
+					</div>					
+				</div>						
+
+				<div class="container">
+					<div class="wrapper">
+						<div class="destaques-mpi">
+							<h2 class="destaques-mpi__title">Serviços em destaque</h2>
+							<? include('inc/produtos-destaque-inc.php'); ?>
+						</div>	
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<iframe class="mapa-home" src="<?=$mapa?>"></iframe>
+				
+				<!--ENDCOMPONENTS-->
+			</section>
+		</div> <!-- end content -->
+	</main>
+	<? include('inc/footer.php'); ?>
+	<!--STARTSCRIPTSFOOTER-->
+
+	<? include('inc/ytvideo.php'); ?>
+	<!--ENDSCRIPTSFOOTER-->
 </body>
-
 </html>

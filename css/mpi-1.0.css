@@ -1,0 +1,86 @@
+/* *** INCLUDES MPI *** */
+/* SAIBA MAIS */
+.more { margin-bottom: 20px; }
+.more h2 strong { font-size: 16px; }
+
+/* GALLERY */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: 10px; }
+.gallery li { border-radius: 3px; overflow: hidden; }
+.gallery li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.gallery li a::before {
+	content: "\f002";
+	font-family: "FontAwesome";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding-top: 20px;
+	opacity: 0;
+	transition: 0.3s;
+	color: #FFF;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallery li:hover a::before {
+	padding-top: 0;
+	opacity: 1;
+}
+.gallery li img { z-index:2; width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; margin: 0 auto; -webkit-transition: .3s; -o-transition: .3s; transition: .3s; }
+
+/* SOCIAL MIDIA */
+.compartilhe { font-size: 0.75em; margin: 0.5em 0; display: block; font-weight: bold; }
+.social-media { display: inline-block; padding: 0; margin: 5px 0; }
+.social-media li { float: left; margin-right: 10px; }
+.bt-twitter { text-indent: -5000px; overflow: hidden; display: block; width: 55px; height: 20px; background: url(<?=$url?>imagens/icones/tweet.png) no-repeat 0 0; }
+.bt-twitter:hover { background-position: 0px -20px; }
+
+/* PAGINAS RELACIONADAS */
+.related-posting-title { font-size: 22px; }
+.related-posting { list-style: none; list-style-type: none; margin: 0; padding: 0; }
+.related-posting .row-posting { clear: both; display: block; background: #eee; border-left: 3px solid var(--primary-color); padding: 10px 20px; transition: all .3s linear; min-height: 85px; margin: 0 0 2px 0; overflow: hidden; }
+.related-posting .row-posting:hover { border-color: var(--dark); }
+.related-posting .row-posting img { display: block; float: left; width: 80px; height: 80px; border: 1px solid #ccc; margin: 0 10px 0 0; }
+.related-posting .row-posting p { font-size: 12px; line-height: 16px; margin-bottom: 0; }
+.related-posting .row-posting a { color: var(--grey); text-decoration: none; }
+.related-posting .row-posting p a { color: #69747b; }
+.related-posting .row-posting strong { font-size: 12px; }
+
+/* ORGANICTABS REGIOES */
+.organictabs--regioes { margin: 10px 0; }
+.organictabs--regioes .organictabs__menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+.organictabs--regioes.brasil .organictabs__menu { grid-template-columns: repeat(auto-fit, minmax(35px, 1fr)); }
+.organictabs--regioes .organictabs__menu span { width: 100%; height: 60px; display: flex; align-items: center; justify-content: center; background-color: #ccc; color: #fff; text-align: center; font-size: 14px; cursor: pointer; transition: 0.3s; }
+.organictabs--regioes.brasil .organictabs__menu span { height: 40px; font-size: 10px; font-weight: bold; }
+.organictabs--regioes .organictabs__menu span.active-tab { background-color: #eee; color: var(--grey); }
+.organictabs--regioes .organictabs__content { padding: 20px; background-color: #eee; overflow: hidden; padding: 10px; }
+.organictabs--regioes .organictabs__content ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 7px; }
+.organictabs--regioes .organictabs__content ul li { height: auto; display: flex; align-items: center; justify-content: flex-start; font-size: 12px; padding: 5px 0; border-bottom: 1px solid #ccc; }
+
+/* COPYRIGHT */
+.copyright { font-size: 10px; color: #999; margin-bottom: 15px; }
+.copyright a { font-size: 10px; color: #999; }
+/* *** END INCLUDES MPI *** */
+
+/* MAPA DO SITE */
+.sitemap { margin-left: 30px; list-style: none; list-style-type: none; }
+.sitemap li { font-size: 15px; margin: 10px 0; }
+.sitemap li a { color: #777; font-size: 20px; line-height: 25px; text-decoration: none; }
+.sitemap li a:hover { color: #222 !important; }
+.sitemap li ul { margin-left: 35px; list-style: none; list-style-type: none; }
+.sitemap li ul li { margin: 5px 0; padding: 0; }
+.sitemap li ul li a { font-size: 14px; color: #777; }
+.sitemap li ul li ul li { margin: 5px 0; }
+.sitemap li ul li ul li a { font-size: 13px; color: #777; }
+.sitemap li a:hover { color: #999; }
+.sitemap i { display: none; }
+.sitemap br { display: none; }
